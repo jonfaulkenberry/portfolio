@@ -1,4 +1,4 @@
 portfolio
 =========
 
-A Rails portfolio
+One guy's Rails portfolio

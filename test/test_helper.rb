@@ -18,7 +18,6 @@ end
    require "capybara/poltergeist"
    include Capybara::DSL
    Capybara.default_driver = :poltergeist
-   # register_spec_type(/feat$/, self)
  end
  
  class ActionDispatch::IntegrationTest

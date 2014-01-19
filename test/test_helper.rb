@@ -2,8 +2,6 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require "minitest/rails/capybara"
-require "minitest/spec"
-require "minitest/autorun"
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -20,7 +18,7 @@ end
    require "capybara/poltergeist"
    include Capybara::DSL
    Capybara.default_driver = :poltergeist
-   #register_spec_type(/page$/, self)
+   # register_spec_type(/feat$/, self)
  end
  
  class ActionDispatch::IntegrationTest

@@ -3,4 +3,4 @@ portfolio
 
 One guy's Rails portfolio
 
-![wk2screenshot](https://raw.github.com/jonfaulkenberry/portfolio/master/screenshots/week_two_screenshot.png)
+![wk3screenshot](https://raw.github.com/jonfaulkenberry/portfolio/master/screenshots/week_three_screenshot.png)

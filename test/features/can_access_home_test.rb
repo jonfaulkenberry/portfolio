@@ -1,5 +1,4 @@
 require "test_helper"
-# require "minitest/rails/capybara"
 
 feature "can access the hompeage" do
   scenario "homepage contains my name" do
@@ -7,3 +6,5 @@ feature "can access the hompeage" do
     page.must_have_content "Jon Faulkenberry"
   end
 end
+
+

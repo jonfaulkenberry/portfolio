@@ -3,10 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -46,14 +42,22 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Use capybara and poltergeist for test purposes
+gem 'minitest-rails'
 gem "minitest-rails-capybara"
 gem 'poltergeist', group: [:development, :test]
 
-# Use rubocop so we can strive for clean code
-# gem 'rubocop', group: [:development, :test]
+group :development do
+  gem "sqlite3"
+end
 
-gem 'minitest-rails'
-gem 'rails_12factor', group: :production
+group :doc do
+  gem "sdoc", require: false
+end
+
+group :produciton do
+  gem "rails_12factor"
+  gem "pg"
+end
 
 ruby '2.1.0'
 

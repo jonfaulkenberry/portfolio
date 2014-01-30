@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -49,8 +50,10 @@ gem "minitest-rails-capybara"
 gem 'poltergeist', group: [:development, :test]
 
 # Use rubocop so we can strive for clean code
-gem 'rubocop', group: [:development, :test]
+# gem 'rubocop', group: [:development, :test]
 
-group :development, :test do
-  gem 'minitest-rails'
-end
+gem 'minitest-rails'
+gem 'rails_12factor', group: :production
+
+ruby '2.1.0'
+

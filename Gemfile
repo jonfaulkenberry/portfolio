@@ -50,14 +50,11 @@ group :development do
   gem "sqlite3"
 end
 
-group :doc do
-  gem "sdoc", require: false
-end
-
-group :produciton do
+group :production do
   gem "rails_12factor"
   gem "pg"
 end
 
-ruby '2.1.0'
+gem 'foundation-rails'
 
+ruby '2.1.0'

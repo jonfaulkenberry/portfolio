@@ -1,7 +1,3 @@
-# Travis          #
-################### 
-.travis.yml
-
 # Compiled source #
 ###################
 *.com

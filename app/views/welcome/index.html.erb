@@ -1,119 +1,22 @@
-<!-- TOP BAR -->
-<header class="mathead fixed">
-	<div class="row">
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<!-- Title Area -->
-				<li class="name">
-					<h1><a href="./index.html">Jon Faulkenberry</a></h1>
-				</li>
-				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-			</ul><!-- /.title-area -->
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul><!-- /.right -->
-			</section><!-- /.top-bar-section -->
-		</nav><!-- /.top-bar -->
-	</div><!-- /.row -->
-</header><!-- /.masthead -->
-<!-- TOP BAR -->
-
- <!-- INTRO -->
-<section class="intro">
-	<div class="row">
-		<div class="medium-12 columns">
-			<h1>Designer &amp; Developer</h1>
-			<p>Hi, my name Jon Faulkenberry. I'm Seattle-based Rails developer.</p>
-			<p><a href="#contact" class="button small alert radius">Drop Me A Line</a></p>
-			<!-- Start: Slider -->
-			<div class="csslider">
-				<input type="radio" name="slides" id="slides_1" checked>
-				<input type="radio" name="slides" id="slides_2">
-				<ul>
-					<li><img src="<%= image_path "mac.png" %>" alt=""></li>
-					<li><img src="<%= image_path "mac.png" %>" alt=""></li>
-				</ul>
-				<!-- Buttons Control -->
-				<div class="navigation">
-					<div>
-						<label for="slides_1"></label>
-						<label for="slides_2"></label>
-					</div>
-				</div><!-- /.navigation -->
-			</div><!-- /.csslider -->
-			<!-- End: Slider -->
-		</div><!-- /.medium-12 .columns -->
-	</div><!-- /.row -->
-</section><!-- /.intro -->
-<!-- INTRO -->
-
 <!-- PORTFOLIO -->
 <section id="portfolio" class="portfolio-wrapper">
+
 	<div class="row">
+
 		<div class="medium-12 columns">
+
 			<h3>My Latest Project</h3>
+
 			<div class="line"></div>
 			<div class="clearfix"></div>
+			
 			<div class="portfolio-list">
+				
 				<!-- Start: Portfolio grid -->
 				<div class="portfolio">
-					<div class="portfolio-cover">
-						<img src="<%= image_path "portfolio/work-1.jpg" %>" alt="">
-						<div class="label">
-							<div class="label-text">
-								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
-							</div><!-- /.label-text -->
-							<div class="label-bg"></div>
-						</div><!-- /.label -->
-					</div><!-- /.portfolio-cover -->
-				</div><!-- /.portfolio -->
-				<div class="portfolio">
-					<div class="portfolio-cover">
-						<img src="<%= image_path "portfolio/work-2.jpg" %>"  alt="">
-						<div class="label">
-							<div class="label-text">
-								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
-							</div><!-- /.label-text -->
-							<div class="label-bg"></div>
-						</div><!-- /.label -->
-					</div><!-- /.portfolio-cover -->
-				</div><!-- /.portfolio -->
-				<div class="portfolio">
-					<div class="portfolio-cover">
-						<img src="<%= image_path "portfolio/work-3.jpg" %>"  alt="">
-						<div class="label">
-							<div class="label-text">
-								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
-							</div><!-- /.label-text -->
-							<div class="label-bg"></div>
-						</div><!-- /.label -->
-					</div><!-- /.portfolio-cover -->
-				</div><!-- /.portfolio -->
-				<div class="portfolio">
-					<div class="portfolio-cover">
-						<img src="<%= image_path "portfolio/work-4.jpg" %>" alt="">
-						<div class="label">
-							<div class="label-text">
-								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
-							</div><!-- /.label-text -->
-							<div class="label-bg"></div>
-						</div><!-- /.label -->
-					</div><!-- /.portfolio-cover -->
-				</div><!-- /.portfolio -->
-
-
-
-				<div class="portfolio">
 
 					<div class="portfolio-cover">
-
-						<img src="<%= image_path "portfolio/work-5.jpg" %>"  alt="">
+            <%= image_tag('portfolio/work-1.jpg') %>
 
 						<div class="label">
 							<div class="label-text">
@@ -130,7 +33,7 @@
 
 					<div class="portfolio-cover">
 
-						<img src="<%= image_path "portfolio/work-6.jpg" %>"  alt="">
+						<%= image_tag('portfolio/work-2.jpg') %>
 
 						<div class="label">
 							<div class="label-text">
@@ -147,7 +50,7 @@
 
 					<div class="portfolio-cover">
 
-						<img src="img/portfolio/work-7.jpg" alt="">
+						<%= image_tag('portfolio/work-3.jpg') %>
 
 						<div class="label">
 							<div class="label-text">
@@ -164,7 +67,77 @@
 
 					<div class="portfolio-cover">
 
-						<img src="img/portfolio/work-8.jpg" alt="">
+						<%= image_tag('portfolio/work-4.jpg') %>
+
+						<div class="label">
+							<div class="label-text">
+								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
+							</div><!-- /.label-text -->
+							<div class="label-bg"></div>
+						</div><!-- /.label -->
+
+					</div><!-- /.portfolio-cover -->
+
+				</div><!-- /.portfolio -->
+
+
+
+				<div class="portfolio">
+
+					<div class="portfolio-cover">
+
+						<%= image_tag('portfolio/work-5.jpg') %>
+
+						<div class="label">
+							<div class="label-text">
+								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
+							</div><!-- /.label-text -->
+							<div class="label-bg"></div>
+						</div><!-- /.label -->
+
+					</div><!-- /.portfolio-cover -->
+
+				</div><!-- /.portfolio -->
+
+				<div class="portfolio">
+
+					<div class="portfolio-cover">
+
+						<%= image_tag('portfolio/work-6.jpg') %>
+
+						<div class="label">
+							<div class="label-text">
+								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
+							</div><!-- /.label-text -->
+							<div class="label-bg"></div>
+						</div><!-- /.label -->
+
+					</div><!-- /.portfolio-cover -->
+
+				</div><!-- /.portfolio -->
+
+				<div class="portfolio">
+
+					<div class="portfolio-cover">
+
+						<%= image_tag('portfolio/work-7.jpg') %>
+
+						<div class="label">
+							<div class="label-text">
+								<h5><a href="#" data-reveal-id="Modal-Portfolio-1" class="text-title">Example Title</a></h5>
+							</div><!-- /.label-text -->
+							<div class="label-bg"></div>
+						</div><!-- /.label -->
+
+					</div><!-- /.portfolio-cover -->
+
+				</div><!-- /.portfolio -->
+
+				<div class="portfolio">
+
+					<div class="portfolio-cover">
+
+						<%= image_tag('portfolio/work-8.jpg') %>
 
 						<div class="label">
 							<div class="label-text">
@@ -234,7 +207,7 @@
 				<div class="col-desc">
 					<p>Cupcake ipsum dolor sit amet sweet jelly-o gummies unerdwear.com. Sweet roll toffee tiramisu. Chocolate jujubes dessert topping muffin pudding marzipan. Croissant chocolate cake unerdwear.com tart wafer cupcake.</p>
 
-					<img src="img/avatar.jpg" alt="">
+					<%= image_tag('avatar.jpg') %>
 				</div><!-- ./col-desc -->
 				
 			</div><!-- /.medium-4 .columns -->
@@ -275,7 +248,7 @@
 
 		<div class="medium-12 columns">
 
-			<img src="<%= image_path "twitter-bird.png" %>" alt="" class="pulse">
+			<%= image_tag('twitter-bird.png', :class => "pulse") %>
 
 			<div id="tweets"></div>
 			<script>
@@ -381,35 +354,13 @@
 	</div><!-- /.row -->
 	
 </section><!-- /.contact-wrapper -->
-<!-- CONTACT -->
-
-
-
-
-<!-- FOOTER -->
-<footer class="copy">
-
-	<div class="row">
-
-		<div class="medium-12 columns">
-
-			<p>&copy; Copyright 2013 <a href="./index.html">Korban Desain</a>. All right reserved. <br>Themes by <a href="https://twitter.com/Aryandhani">Aryandhani</a>.</p>
-			
-		</div><!-- /.medium-12 .columns -->
-
-	</div><!-- /.row -->
-
-</footer><!-- /.copy -->
-<!-- FOOTER -->
-
-
-
+<!-- CONTACT --> 
 
 <!-- Start show Modal for Portfolio from here. You should create a modal for each of your projects. -->
 <!-- Start: Modal Portfolio 1 -->
 <div id="Modal-Portfolio-1" class="reveal-modal small" data-reveal>
 	
-	<img src="img/portfolio/work-7.jpg" alt="">
+	<%= image_tag('portfolio/work-7.jpg') %>
 
 	<h3>Example Title</h3>
 	<p>Macaroon fruitcake marzipan dessert muffin halvah halvah. Cake candy canes apple pie pastry <a href="#">jelly-o caramels</a>. Tiramisu cake lollipop bonbon tart pie caramels biscuit.</p>
@@ -424,4 +375,4 @@
 
 <!-- Start: Modal Portfolio 2 -->
 
-<!-- End: Modal Portfolio 2 -->      
+<!-- End: Modal Portfolio 2 -->

@@ -7,4 +7,11 @@ feature "can access the hompeage" do
   end
 end
 
+feature "can access the hompeage via public domain" do
+  scenario "www.jonfaulkenberry.com contains my name" do
+    visit "http://www.jonfaulkenberry.com"
+    page.must_have_content "Jon Faulkenberry"
+  end
+end
+
 

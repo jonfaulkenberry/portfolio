@@ -46,9 +46,7 @@ gem 'minitest-rails'
 gem "minitest-rails-capybara"
 gem 'poltergeist', group: [:development, :test]
 
-group :development do
-  gem "sqlite3"
-end
+gem "sqlite3", group: [:development, :test]
 
 group :production do
   gem "rails_12factor"

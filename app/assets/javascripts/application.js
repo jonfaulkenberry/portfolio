@@ -15,9 +15,6 @@
 //= require foundation
 //= require turbolinks
 //= require_tree
-
-//= require plugin
-//= require tweets
-//= require main 
+//= require_tree ../../../vendor/assets/javascripts
 
 $(function(){ $(document).foundation(); });

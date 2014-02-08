@@ -41,18 +41,20 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Use capybara and poltergeist for test purposes
-gem 'minitest-rails'
-gem "minitest-rails-capybara"
+# Use capybara and poltergeist in development and test environments
+gem 'minitest-rails', group: [:development, :test]
+gem "minitest-rails-capybara", group: [:development, :test]
 gem 'poltergeist', group: [:development, :test]
 
+# Use SQLite for test and development
 gem "sqlite3", group: [:development, :test]
 
-group :production do
-  gem "rails_12factor"
-  gem "pg"
-end
+# Use Postgre for Heroku production environment
+gem 'pg', group: :production
 
+gem 'rails_12factor', group: :production
+
+# Zurb Foundation
 gem 'foundation-rails'
 
 ruby '2.1.0'

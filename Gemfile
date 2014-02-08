@@ -57,4 +57,7 @@ gem 'rails_12factor', group: :production
 # Zurb Foundation
 gem 'foundation-rails'
 
+# Allow compression on gzip
+gem 'rack-zippy'
+
 ruby '2.1.0'

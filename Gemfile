@@ -42,9 +42,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Use capybara and poltergeist in development and test environments
-gem 'minitest-rails', group: [:development, :test]
-gem "minitest-rails-capybara", group: [:development, :test]
-gem 'poltergeist', group: [:development, :test]
+gem 'minitest-rails'
+gem "minitest-rails-capybara"
+gem 'poltergeist'
 
 # Use SQLite for test and development
 gem "sqlite3", group: [:development, :test]

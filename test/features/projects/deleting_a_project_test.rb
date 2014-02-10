@@ -1,9 +1,13 @@
 require "test_helper"
 
-feature "Projects::DeletingAProject" do
-  scenario "the test is sound" do
-    visit root_path
-    page.must_have_content "Hello World"
-    page.wont_have_content "Goobye All!"
+feature "As a site owner, I want to be delete a project if it sucks" do
+  scenario "delete a project" do
+    # When I visit the posts index
+    visit projects_path
+    # And delete a post
+    portfolio_name = projects(:portfolio).name
+    click_link("Destroy", :match => :first)
+    # The post should no longer exist
+    page.wont_have_content portfolio_name
   end
 end

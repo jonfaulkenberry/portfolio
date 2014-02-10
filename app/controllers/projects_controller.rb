@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_filter :set_project, only: [:show, :edit, :update, :destroy]
+  
   def index
     @projects = Project.all
   end
@@ -35,8 +37,18 @@ class ProjectsController < ApplicationController
     end
   end
   
+  def destroy
+    @project.destroy
+    redirect_to projects_url
+  end
+  
   private
   def project_params
     params.require(:project).permit(:name, :technologies_used)
+  end
+  
+  private
+  def set_project
+     @project = Project.find(params[:id])
   end
 end

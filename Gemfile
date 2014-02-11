@@ -45,4 +45,7 @@ gem 'foundation-rails'
 # Allow compression on gzip
 gem 'rack-zippy'
 
+# Coveralls
+gem 'coveralls', require: false
+
 ruby '2.1.0'

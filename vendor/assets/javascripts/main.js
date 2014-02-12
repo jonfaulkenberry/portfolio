@@ -1,3 +1,4 @@
+/*
 // START DOCUMENT
 $(document).foundation();
 
@@ -50,3 +51,4 @@ $('html').niceScroll({
 	scrollspeed: '120',
 	zindex: '9'
 });
+*/

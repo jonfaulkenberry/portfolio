@@ -23,7 +23,7 @@ Portfolio::Application.configure do
   config.serve_static_assets = true
   
   # Use CloudFront CDN
-  config.action_controller.asset_host = "dgwoa25508j7l.cloudfront.net"
+  config.action_controller.asset_host = "assets.jonfaulkenberry.com"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier

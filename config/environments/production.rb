@@ -22,6 +22,9 @@ Portfolio::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = true
   
+  # Compress!
+  config.assets.compress = true
+  
   # Use CloudFront CDN
   config.action_controller.asset_host = "assets.jonfaulkenberry.com"
 

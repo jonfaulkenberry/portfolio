@@ -44,8 +44,8 @@ gem 'rails_12factor', group: :production
 # Zurb Foundation
 gem 'foundation-rails'
 
-# Allow compression on gzip
-gem 'rack-zippy'
+# Allow compression on Heroku
+gem 'heroku_rails_deflate', :group => :production
 
 # Coveralls
 gem 'coveralls', require: false

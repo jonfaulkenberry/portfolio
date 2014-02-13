@@ -49,3 +49,6 @@ gem 'heroku_rails_deflate', :group => :production
 
 # Coveralls
 gem 'coveralls', require: false
+
+# Unicorn
+gem 'unicorn'

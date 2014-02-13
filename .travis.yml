@@ -8,3 +8,4 @@ deploy:
   app: jonfaulkenberry-portfolio
   on:
     repo: jonfaulkenberry/portfolio
+  run: "rake db:migrate"

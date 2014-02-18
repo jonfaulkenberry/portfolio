@@ -3,6 +3,8 @@
 		<% @projects.each do |project| %>
 		  <div class="project" id="<%= dom_id(project) %>">
 		    <h3><%= project.name %></h3>
+				<% if not current_user.nil? %>
+				<% end %>
 		    <p><%= project.technologies_used %></p>
 		  </div>
 		<% end %>

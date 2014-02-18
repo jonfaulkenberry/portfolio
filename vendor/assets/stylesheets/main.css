@@ -665,13 +665,21 @@ textarea {
 							color: #fff;
 						}
 					.social-icon a.flickr {
-						background-color: #0063dc;
+						background-color: #ff0084;
 						color: #fff;
 					}
 						.social-icon a.flickr:hover {
-							background-color: #004cc5;
+							background-color: #ff0084;
 							color: #fff;
 						}
+  			  .social-icon a.linkedin {
+  					background-color: #007bb6;
+  					color: #fff;
+  				}
+  					.social-icon a.linkedin:hover {
+  						background-color: #007bb6;
+  						color: #fff;
+  					}
 							.social-icon .fa {
 								font-size: 2.25rem;
 								line-height: 2;

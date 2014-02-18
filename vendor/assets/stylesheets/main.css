@@ -160,6 +160,7 @@ button.success,
 		}
 			.top-bar .name h1 a:hover {
 				text-decoration: none;
+				color: #444;
 			}
 				.top-bar .toggle-topbar.menu-icon a {
 					color: #979797;
@@ -361,7 +362,7 @@ textarea {
 	z-index: 97;
 }
 .mathead {
-	background-color: #fff;
+	background-color: rgba(245, 245, 245, 0.88);
 	box-shadow: 0 4px #e8e8e8;
 }
 
@@ -731,7 +732,7 @@ textarea {
 
 /* COPYRIGHT */
 .copy {
-	background-color: #252525;
+	background-color: rgba(37,37,37,0.9);
 	color: #979797;
 	text-align: center;
 	padding: 30px;

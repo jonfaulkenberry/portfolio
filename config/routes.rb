@@ -7,4 +7,5 @@ Portfolio::Application.routes.draw do
   get '/contact' => 'welcome#contact', as: 'contact'
   get '/portfolio' => 'projects#index', as: 'portfolio' 
   get '/blog' => 'posts#index', as: 'blog'
+  get '/manage' => 'welcome#manage', as: 'manage'
 end

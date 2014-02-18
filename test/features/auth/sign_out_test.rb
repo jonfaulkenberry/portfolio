@@ -1,7 +1,7 @@
 require "test_helper"
 
-feature "As a user, I want to be able to sign up for an account so I can make changes" do
-  scenario "user signs up with sign up link" do
+feature "As a user, I want to be able to sign out so no one hacks me" do
+  scenario "user signs up and then signs out" do
     visit root_path
     click_on "Sign Up"
     fill_in "Email", with:"test@test.com"
@@ -11,6 +11,6 @@ feature "As a user, I want to be able to sign up for an account so I can make ch
     page.must_have_content "signed up successfully"
     page.wont_have_content "a problem with your sign up"
     click_on "Sign Out"
-    page.must_have_content "Signed out successfully"
+    page.must_have_content "Signed out successfully"    
   end
 end

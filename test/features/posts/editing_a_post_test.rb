@@ -2,7 +2,8 @@ require "test_helper"
 
 feature "Editing a Post" do
   scenario "submit updates to an existing post" do
-    # When I update a post
+    # Given an authorized user updates a post
+    sign_in
     visit posts_path
     click_link("Show", :match => :first)
     click_on "Edit"

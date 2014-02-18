@@ -4,7 +4,7 @@ feature "As a user, I want to be able to sign up for an account so I can make ch
   scenario "user signs up with sign up link" do
     visit root_path
     click_on "Sign Up"
-    fill_in "Email", with:"test@test.com"
+    fill_in "Email", with: "test@test.com"
     fill_in "Password", with: "p@ssw0rd"
     fill_in "Password confirmation", with: "p@ssw0rd"    
     click_on "Sign up"

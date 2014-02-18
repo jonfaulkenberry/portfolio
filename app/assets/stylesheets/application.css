@@ -22,3 +22,20 @@ a.button:visited { color: #fff; }
   height: 3rem; /* choose any height */ 
   padding: 1rem 0rem 1rem 0rem;
 }
+
+.intro {
+  background: url('/assets/background.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.intro-header {
+  color: #fff;
+}
+
+.intro-text {
+  color: #fff;
+}

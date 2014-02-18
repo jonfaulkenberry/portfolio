@@ -59,19 +59,16 @@
 		
 		<!-- FLASH -->
 		<% flash.each do |key, value| %>
-			<div class="alert-box round <%= flash_class(key) %>">
-				<%= value %>
+			<div class="row">
+				<div class="medium-12 columns">
+					<div class="alert-box round <%= flash_class(key) %>">
+						<%= value %>
+				</div>
 			</div>
 		<% end %>
-		<!-- NOTICE -->
-		<% if notice %>
-			<div class="alert-box round">
-				<%= notice %>
-			</div>
-		<% end %>
-		
+
     <%= yield %> 
-		
+
 		<!-- FOOTER -->
 		<footer class="copy">
 			<div class="row">

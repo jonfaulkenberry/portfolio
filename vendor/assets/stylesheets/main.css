@@ -209,7 +209,7 @@ input[type="time"],
 input[type="url"],
 textarea {
 	height: 2.875rem;
-	font-style: italic;
+/*  font-style: italic;*/
 	border-width: 2px;
 	border-radius: 4px;
 	-webkit-box-shadow: none;

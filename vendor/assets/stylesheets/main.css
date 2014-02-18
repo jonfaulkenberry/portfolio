@@ -18,7 +18,7 @@ body {
 	font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 0.875rem;
 	color: #555;
-	padding-top: 4.063rem;
+/*  padding-top: 4.063rem;*/
 }
 
 
@@ -60,7 +60,7 @@ a {
 /* SELECTION */
 ::selection {
 	background-color: #b3d4fc;
-	color: #fff;
+	color: #444;
 	text-shadow: none;
 }
 
@@ -362,7 +362,7 @@ textarea {
 	z-index: 97;
 }
 .mathead {
-	background-color: rgba(245, 245, 245, 0.88);
+	background-color: rgba(245, 245, 245, 0.9);
 	box-shadow: 0 4px #e8e8e8;
 }
 

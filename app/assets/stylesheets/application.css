@@ -20,6 +20,10 @@ a.button:visited { color: #fff; }
   color: #444;
 }
 
+.menu-icon a:hover {
+  background-color: rgba(245, 245, 245, 0.0);
+}
+
 #footer {
   position: fixed;
   bottom: 0;

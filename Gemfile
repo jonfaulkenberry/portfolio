@@ -52,3 +52,6 @@ gem 'coveralls', require: false
 
 # Passenger
 gem 'passenger'
+
+# Devise
+gem 'devise'

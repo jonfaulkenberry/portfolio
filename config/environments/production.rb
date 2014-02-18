@@ -86,4 +86,6 @@ Portfolio::Application.configure do
 
   # Precompile modernizr
   config.assets.precompile += %w( vendor/modernizr.js )
+  
+  config.action_mailer.default_url_options = { :host => 'jonfaulkenberry.com' }
 end

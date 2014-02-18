@@ -3,7 +3,6 @@
 		<div class="medium-12 columns">
 			<p>&copy; Copyright 2014 <%= link_to "Jon Faulkenberry", root_url %></p>
 			<% if current_user.nil? %>
-				<%= link_to "Sign Up", new_user_registration_path %> or 
 				<%= link_to "Sign In", new_user_session_path %>
 			<% else %>
 				Signed in as <%= current_user.email %> | 

@@ -20,6 +20,7 @@
     <%= f.text_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "button tiny radius" %>
+		<%= link_to 'Back', f.object.new_record? ? manage_path : post_path(f.object), :class => "button tiny radius" %>
   </div>
 <% end %>

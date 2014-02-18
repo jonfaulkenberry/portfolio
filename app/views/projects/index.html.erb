@@ -1,16 +1,14 @@
 <div class="row">
 	<div class="medium-12 columns">
-		<% @projects.each do |project| %>
-		  <div class="project" id="<%= dom_id(project) %>">
-		    <h3><%= project.name %></h3>
-				<% if not current_user.nil? %>
-					<p>
-						<%= link_to "Edit Project", edit_project_path(project) %>
-						<%= link_to "Delete Project", project, :method => :delete, :confirm => "Are you sure?" %>
-					</p>
-				<% end %>
-		    <p><%= project.technologies_used %></p>
-		  </div>
+		<% if @projects.empty? %>
+			<p>There are no projects to show!</p>
+		<% else %>
+			<% @projects.each do |project| %>
+			  <div class="project" id="<%= dom_id(project) %>">
+			    <h3><%= link_to project.name, project %></h3>
+			    <article><%= project.technologies_used %></article>
+			  </div>
+			<% end %>
 		<% end %>
 	</div>
 </div>

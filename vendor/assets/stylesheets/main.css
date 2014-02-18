@@ -632,11 +632,11 @@ textarea {
 				.social-icon a:hover {
 					box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
 				}
-					.social-icon a.facebook {
+					.social-icon a.github {
 						background-color: #3b5998;
 						color: #fff;
 					}
-						.social-icon a.facebook:hover {
+						.social-icon a.github:hover {
 							background-color: #244281;
 							color: #fff;
 						}

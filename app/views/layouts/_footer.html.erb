@@ -1,15 +1,14 @@
-<footer class="copy">
+<footer id="footer" class="copy">
 	<div class="row">
 		<div class="medium-12 columns">
-			<p>&copy; Copyright 2014 <%= link_to "Jon Faulkenberry", root_url %></p>
-			<% if current_user.nil? %>
-				<p><%= link_to "Sign In", new_user_session_path %></p>
-			<% else %>
-				<p>
-					Signed in as <%= current_user.email %> | 
+			<p>
+				&copy; Copyright 2014 <%= link_to "Jon Faulkenberry", root_url %> | 
+				<% if current_user.nil? %>
+					<%= link_to "Sign In", new_user_session_path %>
+				<% else %>
 					<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-				</p>
-			<% end %>
+				<% end %>
+			</p>
 		</div><!-- /.medium-12 .columns -->
 	</div><!-- /.row -->
 </footer><!-- /.copy -->

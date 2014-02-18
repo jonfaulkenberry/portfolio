@@ -736,7 +736,8 @@ textarea {
 			color: #979797;
 		}
 			.copy a:hover {
-				color: #fff;
+				color: #000;
+				text-decoration: none;
 			}
 
 

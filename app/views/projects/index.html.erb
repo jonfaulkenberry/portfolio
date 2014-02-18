@@ -4,6 +4,10 @@
 		  <div class="project" id="<%= dom_id(project) %>">
 		    <h3><%= project.name %></h3>
 				<% if not current_user.nil? %>
+					<p>
+						<%= link_to "Edit Project", edit_project_path(project) %>
+						<%= link_to "Delete Project", project, :method => :delete, :confirm => "Are you sure?" %>
+					</p>
 				<% end %>
 		    <p><%= project.technologies_used %></p>
 		  </div>

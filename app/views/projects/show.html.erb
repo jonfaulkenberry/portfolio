@@ -2,6 +2,10 @@
 	<div class="medium-12 columns">
 		<h2><%= @project.name %></h2>
 		<% if not current_user.nil? %>
+			<p>
+				<%= link_to "Edit Project", edit_project_path(@project) %>
+				<%= link_to "Delete Project", @project, :method => :delete, :confirm => "Are you sure?" %>
+			</p>
 		<% end %>
 		<p>Technologies used: <%= @project.technologies_used %>
 	</div>

@@ -15,7 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
-//= require_tree ../../../vendor/assets/javascripts
+// require_tree ../../../vendor/assets/javascripts
 
 /* START: Google Analytics */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

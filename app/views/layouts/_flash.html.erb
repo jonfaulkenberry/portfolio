@@ -1,0 +1,8 @@
+<% flash.each do |key, value| %>
+	<div class="row">
+		<div class="medium-12 columns">
+			<div class="alert-box round <%= flash_class(key) %>">
+				<%= value %>
+		</div>
+	</div>
+<% end %>

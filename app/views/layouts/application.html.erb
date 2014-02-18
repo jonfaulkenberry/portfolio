@@ -8,17 +8,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="Jon Faulkenberry">
-		
-		<!-- Favicons -->
-		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-		<!-- For third-generation iPad with high-resolution Retina display: -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144-precomposed.png">
-		<!-- For iPhone with high-resolution Retina display: -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114-precomposed.png">
-		<!-- For first- and second-generation iPad: -->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72-precomposed.png">
-		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-		<link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.png">
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -31,61 +20,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body id="top">
-	
-		<!-- TOP BAR -->
-		<header class="mathead fixed">
-			<div class="row">
-				<nav class="top-bar" data-topbar>
-					<ul class="title-area">
-						<!-- Title Area -->
-						<li class="name">
-							<h1><%= link_to "Jon Faulkenberry", root_url %></h1>
-						</li>
-						<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-						<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-					</ul><!-- /.title-area -->
-					<section class="top-bar-section">
-						<!-- Right Nav Section -->
-						<ul class="right">
-							<li><%= link_to "Blog", posts_url %></li>
-							<li><%= link_to "Portfolio", projects_url %></li>
-							<li><%= link_to "Contact", root_url(:anchor => "contact") %></li>
-						</ul><!-- /.right -->
-					</section><!-- /.top-bar-section -->
-				</nav><!-- /.top-bar -->
-			</div><!-- /.row -->
-		</header><!-- /.masthead -->
-		<!-- TOP BAR -->
-		
-		<!-- FLASH -->
-		<% flash.each do |key, value| %>
-			<div class="row">
-				<div class="medium-12 columns">
-					<div class="alert-box round <%= flash_class(key) %>">
-						<%= value %>
-				</div>
-			</div>
-		<% end %>
-
-    <%= yield %> 
-
-		<!-- FOOTER -->
-		<footer class="copy">
-			<div class="row">
-				<div class="medium-12 columns">
-					<p>&copy; Copyright 2014 <%= link_to "Jon Faulkenberry", root_url %></p>
-					<% if current_user.nil? %>
-						<%= link_to "Sign Up", new_user_registration_path %> or 
-						<%= link_to "Sign In", new_user_session_path %>
-					<% else %>
-						Signed in as <%= current_user.email %> | 
-						<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-					<% end %>
-				</div><!-- /.medium-12 .columns -->
-			</div><!-- /.row -->
-		</footer><!-- /.copy -->
-		<!-- FOOTER -->
-		
+		<%= render 'layouts/topnav'%>
+		<%= render 'layouts/flash'%>
+    <%= yield %>
+		<%= render 'layouts/footer'%>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

@@ -149,12 +149,12 @@ button.success,
 	background-color: transparent;
 }
 	.top-bar .name h1 {
-		font-family: "Satisfy-Regular", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+		font-family: "Raleway-Regular", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 		font-size: 1.625rem;
 		margin-top: 0.625rem;
 	}
 		.top-bar .name h1 a {
-			color: #979797;
+			color: #444;
 		}
 			.top-bar .name h1 a:hover {
 				text-decoration: none;
@@ -174,7 +174,7 @@ button.success,
 	.top-bar-section li a:not(.button) {
 		font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 		font-weight: 700;
-		color: #979797;
+		color: #444;
 		text-transform: uppercase;
 		padding: 0.625rem 0.9375rem;
 	}

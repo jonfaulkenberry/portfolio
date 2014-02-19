@@ -17,6 +17,7 @@
     <div id="yield"><%= yield %></div>
 		<%= render 'layouts/flash'%>
 		<%= render 'layouts/footer'%>
-		<%= yield :inline_styles %>
+    <%= yield :inline_scripts %>
+    <%= yield :inline_styles %>
 	</body>
 </html>

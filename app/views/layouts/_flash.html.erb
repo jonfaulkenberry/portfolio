@@ -1,11 +1,9 @@
-<% if not flash.empty? %>
-	<div id="flash" class="row">
-		<div class="medium-12 columns">
-			<% flash.each do |key, value| %>
-				<div class="alert-box round <%= flash_class(key) %>">
-					<%= value %>
-				</div>
-			<% end %>
-		</div>
-	</div>
+<% content_for :inline_scripts do %>
+  <% if not flash.empty? %>
+    <script type="text/javascript">
+      <% flash.each do |type, message| %>
+        toastr.<%= flash_class(type) %>(<%== message.inspect %>);
+      <% end %>
+    </script>
+  <% end %>
 <% end %>

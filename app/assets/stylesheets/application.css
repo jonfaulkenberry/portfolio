@@ -45,3 +45,7 @@ a.button:visited { color: #fff; }
 .intro-text {
   color: #fff;
 }
+
+#yield {
+  margin-bottom: 5em;
+}

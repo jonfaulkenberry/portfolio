@@ -46,7 +46,7 @@ a {
 }
 /* SELECTION */
 ::selection {
-	background-color: #b3d4fc;
+	background-color: yellow;
 	color: #444;
 	text-shadow: none;
 }
@@ -233,30 +233,6 @@ textarea {
 
 
 
-/* REVEAL MODAL */
-.reveal-modal {
-	background-color: #f4f4f4;
-	border-color: #e2e2e2;
-	border-radius: 6px;
-}
-	.reveal-modal img {
-		display: block;
-		width: 70%;
-		height: auto;
-		background-color: #e2e2e2;
-		border-radius: 4px;
-		margin: 0 auto 1.563rem;
-		padding: 4px;
-	}
-		.reveal-modal p.button-margin,
-		.reveal-modal p.button-margin .button {
-			margin: 0;
-		}
-			.reveal-modal .close-reveal-modal {
-				text-decoration: none;
-			}
-
-
 
 /* #Themes Styles
 ================================================== */
@@ -314,9 +290,6 @@ textarea {
 	font-weight: normal;
 	font-style: normal;
 }
-
-
-
 /* BORDER BOTTOM */
 .line {
 	display: block;
@@ -325,9 +298,6 @@ textarea {
 	background-color: #444;
 	margin: 0 auto;
 }
-
-
-
 /* NAV HEADER */
 .fixed {
 	z-index: 97;
@@ -336,9 +306,6 @@ textarea {
 	background-color: rgba(245, 245, 245, 0.92);
 	box-shadow: 0 1px #e8e8e8;
 }
-
-
-
 /* INTRO */
 .intro {
 	background-color: transparent;

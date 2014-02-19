@@ -6,7 +6,7 @@ feature "As the site owner, I want to edit a project so that I can correct typos
     visit edit_project_path(projects(:portfolio))
     fill_in "Name", with: "My Rad Portfolio"
     click_on "Update Project"
-    page.text.must_include "successfully"
+    page.html.must_include "successfully"
     page.text.must_include "Rad Portfolio"
     page.text.wont_include "Code Fellows Portfolio"
   end

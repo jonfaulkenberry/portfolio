@@ -9,7 +9,7 @@ feature "Editing a Post" do
     updated_title = "Becoming a Web Developer"
     fill_in "Title", with: updated_title
     click_on "Update Post"
-    page.text.must_include "Post was successfully updated"
+    page.has_content? "Post was successfully updated"
     visit blog_path
     page.text.must_include updated_title
   end

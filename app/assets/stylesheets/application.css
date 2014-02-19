@@ -33,6 +33,10 @@ a.button:visited { color: #fff; }
   padding: 1rem 0rem 1rem 0rem;
 }
 
+#footer a:hover {
+  color: #fff;
+}
+
 .intro {
   background: url('/assets/unsplash_bg.png') no-repeat center center fixed; 
   -webkit-background-size: cover;

@@ -4,8 +4,9 @@ Portfolio::Application.routes.draw do
   resources :projects
 
   root 'welcome#index'
-  get '/contact' => 'welcome#contact', as: 'contact'
-  get '/portfolio' => 'projects#index', as: 'portfolio' 
+  get '/about' => 'welcome#about', as: 'about'
   get '/blog' => 'posts#index', as: 'blog'
+  get '/contact' => 'welcome#contact', as: 'contact'
   get '/manage' => 'welcome#manage', as: 'manage'
+  get '/portfolio' => 'projects#index', as: 'portfolio' 
 end

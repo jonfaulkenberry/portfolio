@@ -15,7 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
-// require_tree ../../../vendor/assets/javascripts
+//= require_tree ../../../vendor/assets/javascripts
 
 /* START: Google Analytics */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -24,6 +24,15 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-48052298-1', 'jonfaulkenberry.com');
 ga('send', 'pageview');
-/* END: Google Analytics */
+/* END: Google Analytics */ 
+
+/* Code Mirror */
+$( document ).ready(function() {
+  var mdEditor = $('.codemirror-md').get(0);
+  var myCodeMirror = CodeMirror.fromTextArea(mdEditor, {
+    lineNumbers: true,
+    theme: 'monokai'
+  });
+});
 
 $(function(){ $(document).foundation(); });

@@ -1,9 +1,10 @@
-<!-- Replace with content_for when you figure out how -->
-<style type="text/css" media="screen">
-	body {
-	  padding-top: 0.0rem !important;
-	}
-</style>
+<% content_for :inline_styles do %>
+	<style type="text/css" media="screen">
+		body {
+		  padding-top: 0.0rem !important;
+		}
+	</style> 
+<% end %>
 
 <section class="intro">
 	<div class="row">
@@ -12,9 +13,8 @@
 			<p class="intro-text">I'm Jon Faulkenberry, a Seattle-based Web developer</p>
 			<p>
 				<%= link_to 'Send Me a Message', contact_path, :class => 'button small alert radius' %>
-				<a href="https://github.com/jonfaulkenberry" class="button small alert radius">Follow Me on GitHub</a>
+				<a href="//github.com/jonfaulkenberry" class="button small alert radius">Follow Me on GitHub</a>
 			</p>
-			<!-- <%= image_tag('mac.png') %> -->
 		</div><!-- /.medium-12 .columns -->
-	</div><!-- /.row -->	
+	</div><!-- /.row -->
 </section><!-- /.intro -->

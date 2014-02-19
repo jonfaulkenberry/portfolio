@@ -58,3 +58,6 @@ gem 'devise'
 
 # Redcarpet
 gem 'redcarpet'
+
+# Pygments - syntax highlighting
+gem 'pygments.rb'

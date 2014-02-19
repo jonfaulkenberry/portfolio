@@ -28,9 +28,8 @@ a.button:visited { color: #fff; }
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 3rem; /* choose any height */ 
+  height: 3rem;
   padding: 1rem 0rem 1rem 0rem;
-  margin: 8rem 0rem 0rem 0rem;
 }
 
 .intro {

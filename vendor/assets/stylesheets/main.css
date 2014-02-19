@@ -172,7 +172,7 @@ button.success,
 	background-color: transparent;
 }
 	.top-bar-section li a:not(.button) {
-		font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		font-family: "Raleway-Regular", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 		font-weight: 700;
 		color: #444;
 		text-transform: uppercase;
@@ -456,75 +456,6 @@ textarea {
 .col-progress {
 	margin-top: 2.188rem;
 }
-
-
-
-/* LATEST TWEETS */
-.tweets-wrapper {
-	background-color: #fff;
-	text-align: center;
-	border-top: 1px solid #e2e2e2;
-	border-bottom: 1px solid #e2e2e2;
-	padding: 4.063rem 0 1.75rem;
-}
-	.tweets-wrapper img {
-		display: block;
-		width: 70px;
-		height: auto;
-		margin: 0 auto 1.875rem;
-	}
-#tweets {
-	margin-bottom: 2.188rem;
-}
-	#tweets ul {
-		list-style: none;
-		padding: 0;
-	}
-		#tweets p.tweet {
-			font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-			font-size: 1.625rem;
-			font-style: italic;
-			line-height: 2.25rem;
-		}
-/** Effect **/
-.pulse {
-	-webkit-animation-name: pulse;
-			animation-name: pulse;
-	-webkit-animation-duration: 1.5s;
-			animation-duration: 1.5s;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-@keyframes pulse {
-	0% {
-		transform: scale(0.9);
-		opacity: 0.7;		
-	}
-	50% {
-		transform: scale(1);
-		opacity: 1;	
-	}	
-	100% {
-		transform: scale(0.9);
-		opacity: 0.7;	
-	}			
-}
-@-webkit-keyframes pulse {
-	0% {
-		-webkit-transform: scale(0.95);
-		opacity: 0.7;		
-	}
-	50% {
-		-webkit-transform: scale(1);
-		opacity: 1;	
-	}	
-	100% {
-		-webkit-transform: scale(0.95);
-		opacity: 0.7;	
-	}			
-}
-
-
 
 /* CONTACT */
 .contact-wrapper {

@@ -4,8 +4,16 @@
 			<p>There are no posts to show!</p>
 		<% else %>
 			<% @posts.each do |post| %>
-				<h3><%= link_to post.title, post %></h3>
-				<article><%= post.body %></article>
+				<article>
+					<header>
+						<h3><%= link_to post.title, post %></h3>
+						<p>Posted by <%= post.author.email %></p>
+					</header>
+					<section>
+						<%= post.body %>
+					</section>
+				</article>
+				<hr />
 	    <% end %>
 		<% end %>
 	</div>

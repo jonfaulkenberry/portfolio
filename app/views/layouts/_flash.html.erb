@@ -1,5 +1,5 @@
 <% if not flash.empty? %>
-	<div class="row">
+	<div id="flash" class="row">
 		<div class="medium-12 columns">
 			<% flash.each do |key, value| %>
 				<div class="alert-box round <%= flash_class(key) %>">

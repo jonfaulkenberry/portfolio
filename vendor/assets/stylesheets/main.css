@@ -5,13 +5,8 @@
 	#Themes Styles
 	#Media queries are built using ems in Foundation. */
 
-
-
 /* #Global Styles
 ================================================== */
-
-
-
 /* BODY STYLE */
 body {
 	background-color: #f4f4f4;
@@ -20,7 +15,6 @@ body {
 	color: #555;
   padding-top: 3.5rem;
 }
-
 /* LINK */
 a {
 	color: #f04124;
@@ -37,8 +31,6 @@ a {
 			outline-offset: 0;
 		}
 
-
-
 /* STYLE MARGIN */
 .margin-top {
 	margin-top: 1.875rem;
@@ -52,9 +44,6 @@ a {
 .margin-left {
 	margin-left: 1.875rem;
 }
-
-
-
 /* SELECTION */
 ::selection {
 	background-color: #b3d4fc;
@@ -528,29 +517,22 @@ textarea {
 									   -moz-animation: toRightFromLeft 0.3s forwards;
 											animation: toRightFromLeft 0.3s forwards;
 								}
-
-
-
-
 /* COPYRIGHT */
 .copy {
 	color: #979797;
 	text-align: center;
 }
-	.copy p {
-		line-height: normal;
-		margin: 0;
-	}
-		.copy a {
-			color: #979797;
-		}
-			.copy a:hover {
-				color: #000;
-				text-decoration: none;
-			}
-
-
-
+.copy p {
+	line-height: normal;
+	margin: 0;
+}
+.copy a {
+	color: #979797;
+}
+.copy a:hover {
+	color: #000;
+	text-decoration: none;
+}
 /* #Media queries are built using ems in Foundation.
 ============================================================== */
 /* max-width 40rem = 640px */

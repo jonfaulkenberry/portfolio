@@ -55,3 +55,6 @@ gem 'passenger'
 
 # Devise
 gem 'devise'
+
+# Redcarpet
+gem 'redcarpet'

@@ -1,66 +1,37 @@
 source 'https://rubygems.org'
-
 ruby '2.1.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'devise'
+gem 'foundation-rails'
+gem 'friendly_id'
+gem 'jbuilder', '~> 1.2'
+gem 'jquery-rails'
+gem 'pygments.rb'
 gem 'rails', '4.0.0'
-
-# Use SCSS for stylesheets
+gem 'redcarpet'
 gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
+gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+group :production do
+  gem 'heroku_rails_deflate'
+  gem 'passenger'
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
-# Use capybara and poltergeist in development and test environments
-gem 'minitest-rails'
-gem "minitest-rails-capybara"
-gem 'poltergeist'
+group :test, :development do
+  gem 'sqlite3'
+end
 
-# Use SQLite for test and development
-gem "sqlite3", group: [:development, :test]
+group :test do
+  gem 'coveralls', require: false
+  gem 'minitest-rails'
+  gem "minitest-rails-capybara"
+  gem 'poltergeist'
+end
 
-# Use Postgre for Heroku production environment
-gem 'pg', group: :production
-
-gem 'rails_12factor', group: :production
-
-# Zurb Foundation
-gem 'foundation-rails'
-
-# Allow compression on Heroku
-gem 'heroku_rails_deflate', :group => :production
-
-# Coveralls
-gem 'coveralls', require: false
-
-# Passenger
-gem 'passenger'
-
-# Devise
-gem 'devise'
-
-# Redcarpet
-gem 'redcarpet'
-
-# Pygments - syntax highlighting
-gem 'pygments.rb'
-
-# Friendly urls
-gem 'friendly_id'
+group :doc do
+  gem 'sdoc', require: false
+end

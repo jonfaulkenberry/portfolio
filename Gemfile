@@ -61,3 +61,6 @@ gem 'redcarpet'
 
 # Pygments - syntax highlighting
 gem 'pygments.rb'
+
+# Friendly urls
+gem 'friendly_id'

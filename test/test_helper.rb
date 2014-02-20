@@ -17,11 +17,7 @@ require "minitest/pride"
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
-  
-  def generate_friendly_urls
-    User.find_each(&:save)
-  end
-  
+
   # Add more helper methods to be used by all tests here...
   def sign_in
     visit new_user_session_path

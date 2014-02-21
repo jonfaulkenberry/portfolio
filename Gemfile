@@ -3,6 +3,7 @@ ruby '2.1.0'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
+gem 'font_assets'
 gem 'foundation-rails'
 gem 'friendly_id'
 gem 'jbuilder', '~> 1.2'

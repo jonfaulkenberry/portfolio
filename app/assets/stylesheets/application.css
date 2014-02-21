@@ -46,8 +46,13 @@ a.button:visited { color: #fff; }
 #yield {
   margin-bottom: 3rem;
   margin-top: 0.6rem;
+
 }
 
 .top-bar-section > ul.right > li > a {
   padding: 0.625rem 0.9375rem !important;
+}
+
+.CodeMirror {
+  font-size: 0.875rem
 }

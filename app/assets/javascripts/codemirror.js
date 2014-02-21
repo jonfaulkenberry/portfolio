@@ -3,6 +3,7 @@ $( document ).ready(function() {
     $('.codemirror').each(function() {
       var myCodeMirror = CodeMirror.fromTextArea($(this).get(0), {
         lineNumbers: true,
+        lineWrapping: true,
         theme: 'monokai'
       });
     });

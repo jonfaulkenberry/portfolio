@@ -319,7 +319,7 @@ textarea {
 /* ABOUT */
 .about-wrapper {
 	background-color: transparent;
-	padding: 3.125rem 0;
+/*  padding: 3.125rem 0;*/
 }
 	.about-wrapper h3 {
 		text-align: center;

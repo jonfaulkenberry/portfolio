@@ -7,6 +7,9 @@ gem 'foundation-rails'
 gem 'friendly_id'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
+gem 'minitest-rails'
+gem 'minitest-rails-capybara'
+gem 'poltergeist'
 gem 'pygments.rb'
 gem 'rails', '4.0.0'
 gem 'redcarpet'
@@ -27,9 +30,6 @@ end
 
 group :test do
   gem 'coveralls', require: false
-  gem 'minitest-rails'
-  gem "minitest-rails-capybara"
-  gem 'poltergeist'
 end
 
 group :doc do

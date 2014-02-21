@@ -28,11 +28,6 @@ module Portfolio
     config.generators do |g|
       g.test_framework :mini_test, :spec => true, :fixture => false
     end
-    
-    config.action_dispatch.default_headers = {
-     'Access-Control-Allow-Origin' => '*',
-     'Access-Control-Request-Method' => '*'
-    }
   end
 end
 

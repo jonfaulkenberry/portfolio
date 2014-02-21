@@ -13,10 +13,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body id="top">
-  <%= render 'layouts/topnav'%>
-  <div id="yield"><%= yield %></div>
-  <%= render 'layouts/flash'%>
-  <%= render 'layouts/footer'%>
+  <div id="wrapper">
+    <%= render 'layouts/topnav'%>
+    <div id="yield">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/flash'%>
+    <%= render 'layouts/footer'%>
+  </div>
   <%= yield :inline_scripts %>
   <%= yield :inline_styles %>
 </body>

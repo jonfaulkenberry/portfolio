@@ -11,7 +11,7 @@
 		<% if not current_user.nil? %>
 			<p>
 				<%= link_to "Edit Post", edit_post_path(@post), :class => "button tiny radius" %>
-				<%= link_to "Delete Post", @post, :class => "button tiny radius alert", :method => :delete, :confirm => "Are you sure?" %>
+				<%= link_to "Delete Post", @post, :class => "button tiny radius alert", :method => :delete, :data => { :confirm => "Are you sure?" } %>
 			</p>
 		<% end %>
 		<p>

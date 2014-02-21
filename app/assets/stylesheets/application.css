@@ -3,6 +3,7 @@
 *= require foundation_and_overrides
 *= require_tree ../../../vendor/assets/stylesheets
 *= require_tree .
+*= require nprogress
 */
 a.button:visited { color: #fff; }
 

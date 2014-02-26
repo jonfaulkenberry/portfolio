@@ -1,11 +1,3 @@
 language: ruby
 rvm:
-- 2.1.0
-deploy:
-  provider: heroku
-  api_key:
-    secure: ESOv6Pxy827AF601tXmXqdlCUyUBsddqLMPG3Eeaoq4AOd+4vJXt8sPv4ezviweGZjyLGlEhr0cw3c50sIi14jZu2uaUGG5JqshC946cS0Nm2obZgsgJcQXbIDEMIRNtPQRRDbptRlRunSGINoqyYFI/5KO4bo2MRmooBhHoofQ=
-  app: jonfaulkenberry-portfolio
-  on:
-    repo: jonfaulkenberry/portfolio
-  run: "rake db:migrate"
+- 1.9.3

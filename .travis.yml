@@ -1,7 +1,7 @@
 language: ruby
 rvm:
 - 1.9.3
-env:
+global:
   - LOCAL_TEST_DB_NAME='portfolio_test'
   - LOCAL_TEST_USERNAME='travis'
   - LOCAL_TEST_PASSWORD=''

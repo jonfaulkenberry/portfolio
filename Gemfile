@@ -10,9 +10,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'minitest-rails'
-gem 'minitest-rails-capybara'
+gem 'mysql2'
 gem 'nprogress-rails'
-gem 'poltergeist'
 gem 'pygments.rb'
 gem 'rails', '4.0.0'
 gem 'redcarpet'
@@ -20,16 +19,14 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-group :production do
-  gem 'mysql2'
-end
-
-group :test, :development do
-  gem 'sqlite3'
+group :development do
+  gem 'passenger'
 end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'minitest-rails-capybara'
+  gem 'poltergeist'
 end
 
 group :doc do

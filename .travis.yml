@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 1.9.3
+env:
+  - LOCAL_TEST_DB_NAME='portfolio_test'
+  - LOCAL_TEST_USERNAME='travis'
+  - LOCAL_TEST_PASSWORD=''
+  - LOCAL_TEST_HOSTNAME=127.0.01
+  - LOCAL_TEST_PORT='3306'
+before_script:
+  - mysql -e 'create database portfolio_test;'

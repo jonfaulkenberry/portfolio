@@ -149,7 +149,6 @@ button.success:focus,
 .top-bar-section ul li.active > a,
 .top-bar-section ul li.active > a:hover,
 .top-bar-section li a:not(.button):hover {
-  background-color: #f5f5f5;
   color: #ea2f10;
   text-decoration: none;
 }

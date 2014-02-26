@@ -49,6 +49,7 @@ GEM
       simplecov (>= 0.7)
       term-ansicolor
       thor
+    daemon_controller (1.1.8)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -103,6 +104,10 @@ GEM
       mini_portile (~> 0.5.0)
     nprogress-rails (0.1.2.3)
     orm_adapter (0.5.0)
+    passenger (4.0.37)
+      daemon_controller (>= 1.1.0)
+      rack
+      rake (>= 0.8.1)
     poltergeist (1.5.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -198,6 +203,7 @@ DEPENDENCIES
   minitest-rails-capybara
   mysql2
   nprogress-rails
+  passenger
   poltergeist
   pygments.rb
   rails (= 4.0.0)

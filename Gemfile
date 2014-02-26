@@ -21,10 +21,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :production do
-  gem 'heroku_rails_deflate'
-  gem 'passenger'
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'mysql2'
 end
 
 group :test, :development do

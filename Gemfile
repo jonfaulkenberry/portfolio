@@ -19,11 +19,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-group :production do
-  gem 'unicorn'
-end
-
-group :development do
+group :development, :production do
   gem 'passenger'
 end
 

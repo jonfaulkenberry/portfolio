@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.1.0'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
@@ -18,6 +18,10 @@ gem 'redcarpet'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+
+group :production do
+  gem 'unicorn'
+end
 
 group :development do
   gem 'passenger'

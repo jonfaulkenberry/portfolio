@@ -1,6 +1,4 @@
 language: ruby
-rvm:
-- 1.9.3
 env:
   global:
     - DB_NAME_TEST=portfolio_test

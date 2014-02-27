@@ -1,20 +1,20 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: <%= ENV['LOCAL_DEV_DB_NAME'] %>
-  username: <%= ENV['LOCAL_DEV_USERNAME'] %>
-  password: <%= ENV['LOCAL_DEV_PASSWORD'] %>
-  host: <%= ENV['LOCAL_DEV_HOSTNAME'] %>
-  port: <%= ENV['LOCAL_DEV_PORT'] %>
+  database: <%= ENV['DB_NAME_DEV'] %>
+  username: <%= ENV['USERNAME_DEV'] %>
+  password: <%= ENV['PASSWORD_DEV'] %>
+  host: <%= ENV['HOSTNAME_DEV'] %>
+  port: <%= ENV['PORT_DEV'] %>
 
 test:
   adapter: mysql2
   encoding: utf8
-  database: <%= ENV['LOCAL_TEST_DB_NAME'] %>
-  username: <%= ENV['LOCAL_TEST_USERNAME'] %>
-  password: <%= ENV['LOCAL_TEST_PASSWORD'] %>
-  host: <%= ENV['LOCAL_TEST_HOSTNAME'] %>
-  port: <%= ENV['LOCAL_TEST_PORT'] %>
+  database: <%= ENV['DB_NAME_TEST'] %>
+  username: <%= ENV['USERNAME_TEST'] %>
+  password: <%= ENV['PASSWORD_TEST'] %>
+  host: <%= ENV['HOSTNAME_TEST'] %>
+  port: <%= ENV['PORT_TEST'] %>
 
 production:
   adapter: mysql2

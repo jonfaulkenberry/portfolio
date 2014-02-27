@@ -3,7 +3,7 @@ rvm:
 - 1.9.3
 env:
   global:
-    - LOCAL_TEST_DB_NAME=portfolio_test
-    - LOCAL_TEST_USERNAME=travis
+    - DB_NAME_TEST=portfolio_test
+    - USERNAME_TEST=travis
 before_script:
   - mysql -e 'create database portfolio_test;'

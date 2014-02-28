@@ -25,6 +25,8 @@ end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'forgery'
   gem 'minitest-rails-capybara'
   gem 'poltergeist'
 end

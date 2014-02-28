@@ -15,7 +15,8 @@ module Portfolio
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
 
     config.generators do |g|
-      g.test_framework :mini_test, :spec => true, :fixture => false
+      g.test_framework :mini_test, :spec => true
+      g.fixture_replacement :factory_girl
     end
 
     config.before_configuration do

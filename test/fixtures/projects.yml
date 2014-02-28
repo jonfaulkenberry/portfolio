@@ -1,9 +1,0 @@
-portfolio:
-  id: 1
-  name: How meta
-  technologies_used: Ruby, Rails, Zurb
-
-freelance:
-  id: 2
-  name: Barnyard Cereal
-  technologies_used: Ruby, Rails, Farmville API, Automilker

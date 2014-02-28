@@ -3,26 +3,27 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
+require "minitest/pride"
 require "coveralls"
 
 Coveralls.wear!
 
-# To add Capybara feature tests add `gem "minitest-rails-capybara"`
-# to the test group in the Gemfile and uncomment the following:
-require "minitest/rails/capybara"
-
-# Uncomment for awesome colorful output
-require "minitest/pride"
-
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
-  fixtures :all
+  include FactoryGirl::Syntax::Methods
 
-  # Add more helper methods to be used by all tests here...
-  def sign_in
+  def sign_in_as_author
+    @user = create(:author)
     visit new_user_session_path
-    fill_in "Email", with: users(:dude).email
-    fill_in "Password", with: "password"
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: @user.password
+    click_on "Sign in"
+  end
+
+  def sign_in_as_owner
+    @user = create(:owner)
+    visit new_user_session_path
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: @user.password
     click_on "Sign in"
   end
 end

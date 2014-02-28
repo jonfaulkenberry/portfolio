@@ -1,8 +1,12 @@
 require "test_helper"
 
-feature "As a site owner, I would like to be able to view a project so I can evaluate it" do
-  scenario "view a project" do
-    visit project_path(projects(:portfolio).id)
-    page.text.must_include projects(:portfolio).name
+feature "As a visitor, I want to view a project" do
+  background do
+    @project = create(:project)
+  end
+  scenario "view a project successfully using project url" do
+    visit project_path(@project)
+    page.text.must_include @project.name
+    page.text.must_include @project.technologies_used
   end
 end

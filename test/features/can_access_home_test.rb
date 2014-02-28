@@ -1,17 +1,16 @@
 require "test_helper"
 
-feature "can access the hompeage" do
-  scenario "homepage contains my name" do
+feature "As a visitor, I want to be able access the homepage" do
+  scenario "root path returns status code 200" do
     visit root_path
-    page.must_have_content "Jon Faulkenberry"
+    page.status_code.must_equal 200
   end
 end
 
-feature "can access the hompeage via public domain" do
-  scenario "www.jonfaulkenberry.com contains my name" do
+feature %q{As a visitor, I want to be able access the homepage
+   via public domain} do
+  scenario "www.jonfaulkenberry.com returns status code 200" do
     visit "http://www.jonfaulkenberry.com"
-    page.must_have_content "Jon Faulkenberry"
+    page.status_code.must_equal 200
   end
 end
-
-

@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
   
   def destroy
     @project.destroy
-    redirect_to portfolio_url
+    redirect_to portfolio_url, notice: 'Project was successfully deleted.'
   end
   
   private

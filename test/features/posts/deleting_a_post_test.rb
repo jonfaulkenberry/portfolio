@@ -1,13 +1,14 @@
 require "test_helper"
 
-feature "Deleting a Post" do
-  scenario "post is deleted with a click" do
-    sign_in
-    visit blog_path
-    http_post_title = posts(:http).title
-    click_on http_post_title
+feature "As an owner, I want to delete a post" do
+  background do
+    sign_in_as_owner
+    @post = create(:post)
+  end
+  scenario "post is deleted successfully" do
+    visit post_path(@post)
     click_on "Delete Post"
-    visit blog_path
-    page.wont_have_content http_post_title
+    page.has_content? "Post was successfully deleted."
+    page.wont_have_content @post.title
   end
 end

@@ -1,13 +1,14 @@
 require "test_helper"
 
-feature "As a site owner, I want to be delete a project if it sucks" do
-  scenario "delete a project" do
-    sign_in
-    visit portfolio_path
-    portfolio_name = projects(:portfolio).name
-    click_on portfolio_name
+feature "As a site owner, I want to delete any project" do
+  background do
+    sign_in_as_owner
+    @project = create(:project)
+  end
+  scenario "delete a project successfully" do
+    visit project_path(@project)
     click_on "Delete Project"
-    visit portfolio_path
-    page.wont_have_content portfolio_name
+    page.has_content? "Project was successfully deleted"
+    page.wont_have_content @project.name
   end
 end

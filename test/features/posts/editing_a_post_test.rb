@@ -1,16 +1,22 @@
 require "test_helper"
 
-feature "Editing a Post" do
-  scenario "submit updates to an existing post" do
-    sign_in
-    visit blog_path
-    click_link posts(:http).title
+feature "As an author, I want to edit a post" do
+  background do
+    sign_in_as_author
+    @post = create(:post)
+  end
+  scenario "edit an existing post successfully" do
+    visit post_path(@post)
     click_on "Edit Post"
-    updated_title = "Becoming a Web Developer"
-    fill_in "Title", with: updated_title
+    title = Forgery(:lorem_ipsum).words(10, :random => true)
+    body  = Forgery(:lorem_ipsum).words(250, :random => true)
+    fill_in "Title", with: title
+    fill_in "Body", with: body
     click_on "Update Post"
     page.has_content? "Post was successfully updated"
-    visit blog_path
-    page.text.must_include updated_title
+    page.text.wont_include @post.title
+    page.text.wont_include @post.body
+    page.text.must_include title
+    page.text.must_include body
   end
 end

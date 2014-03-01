@@ -6,6 +6,7 @@ FactoryGirl.define do
     sequence :password do |n|
       Forgery(:basic).password(:at_least => 8, :at_most => 128, :random => true)
     end
+    role "author"
   end
 
   factory :owner, class: User do
@@ -15,5 +16,6 @@ FactoryGirl.define do
     sequence :password do |n|
       Forgery(:basic).password(:at_least => 8, :at_most => 128, :random => true)
     end
+    role "owner"
   end
 end

@@ -15,6 +15,12 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+  <% if policy(@post).publish? %>
+    <div class="field">
+      <%= f.label :published %><br>
+      <%= f.check_box :published %>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body, :class => "codemirror" %>

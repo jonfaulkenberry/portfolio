@@ -18,14 +18,12 @@
           <li><%= link_to "Blog", blog_url, :class => "topnav-link" %></li>
           <li><%= link_to "Portfolio", portfolio_url, :class => "topnav-link" %></li>
           <!-- Search it up! -->
-          <li><input class="show-for-small-only small-search-box" type="text" placeholder="Enter search terms..." /></li>
-          <li><i class="show-for-small-only small-search-icon fa fa-search fa-lg">&nbsp;</i></li>
-          <!-- Search it up! -->
-          <li><input class="search-box" type="text" placeholder="Enter search terms..." /></li>
-          <li><a class="search-btn" href="#">Search</a></li>
-          <li><i class="search-icon fa fa-search fa-lg">&nbsp;</i></li>
-          <li><i class="search-back-icon fa fa-arrow-circle-left fa-lg">&nbsp;</i></li>
-          <li></li>
+          <%= form_tag("/search", method: "get", :class => "search-form") do %>
+            <li><%= text_field_tag :search, params[:search] %></li>
+            <li><%= submit_tag "Search", :name => nil, :class => "search-btn button small radius" %></li>
+            <li><i class="search-icon fa fa-search fa-lg">&nbsp;</i></li>
+            <li><i class="search-back-icon fa fa-arrow-circle-left fa-lg">&nbsp;</i></li>
+          <% end %>
         </ul>
       </section>
     </nav>

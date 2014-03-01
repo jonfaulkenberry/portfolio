@@ -15,9 +15,9 @@ NProgress.configure({
 });
 
 $( document ).ready(function() {
-  $( ".search-btn, .search-back-icon, .search-box" ).css("display", "none");
+  $( ".search-btn, .search-back-icon, #search" ).css("display", "none");
   $( ".search-icon, .search-back-icon" ).click(function() {
-    $( ".topnav-link, .search-icon, .search-back-icon, .search-box, .search-btn" ).toggle( "fast" );
+    $( ".topnav-link, .search-icon, .search-back-icon, #search, .search-btn" ).toggle( "fast" );
   });
 });
 

@@ -67,3 +67,11 @@ a.button:visited { color: #fff; }
   color: #ea2f10;
 }
 
+#top > header > div > nav > section > ul > form > li > .search-btn {
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.search-form {
+  display: inline;
+}

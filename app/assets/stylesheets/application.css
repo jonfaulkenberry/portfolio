@@ -55,4 +55,15 @@ a.button:visited { color: #fff; }
   opacity: 1.0;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: alpha(opacity=100);
-} 
+}
+
+.search-icon,
+.search-back-icon {
+  padding: 1.4rem 0 0 1rem;
+}
+
+.search-icon:hover,
+.search-back-icon:hover {
+  color: #ea2f10;
+}
+

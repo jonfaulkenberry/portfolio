@@ -6,5 +6,13 @@ class User < ActiveRecord::Base
    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
   else
    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable 
-  end     
+  end
+  
+  def owner?
+    role == "owner"
+  end
+  
+  def author?
+    ["owner", "author"].include? role
+  end
 end

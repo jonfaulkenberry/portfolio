@@ -1,14 +1,50 @@
 require "test_helper"
 
-feature "As an owner, I want to delete a post" do
+feature "As an owner, I want to delete any post" do
   background do
     sign_in_as_owner
-    @post = create(:post)
   end
-  scenario "post is deleted successfully" do
+  scenario "owner can delete own posts" do
+    @post = create(:post, author: @user)
     visit post_path(@post)
     click_on "Delete Post"
     page.has_content? "Post was successfully deleted."
-    page.wont_have_content @post.title
+    page.wont_have_content @post.title                    
+  end 
+  scenario "owner can delete another users posts" do
+    @post = create(:post, author: @user)
+    visit post_path(@post)
+    click_on "Delete Post"
+    page.has_content? "Post was successfully deleted."
+    page.wont_have_content @post.title                    
+  end 
+end
+
+feature "As an author, I should only be able to delete my own posts" do
+  background do
+    sign_in_as_author
+  end
+  scenario "author can delete own posts" do
+    @post = create(:post, author: @user)
+    visit post_path(@post)
+    click_on "Delete Post"
+    page.has_content? "Post was successfully deleted."
+    page.wont_have_content @post.title                    
+  end
+  scenario "author cannot delete other users posts" do
+    @other_author = create(:author)
+    @post = create(:post, author: @other_author)
+    visit post_path(@post)
+    page.text.wont_include "Delete Post"
+  end
+end
+
+feature "As a visitor, I should not be able to delete any posts" do
+  background do
+    @post = create(:post)
+  end
+  scenario "visitor cannot delete a post" do
+    visit post_path(@post)
+    page.text.wont_include "Delete Post"
   end
 end

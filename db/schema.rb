@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219233345) do
+ActiveRecord::Schema.define(version: 20140301010001) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 20140219233345) do
     t.datetime "updated_at"
     t.integer  "author_id"
     t.string   "slug"
+    t.boolean  "published"
   end
 
+  add_index "posts", ["published"], name: "index_posts_on_published", using: :btree
   add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
 
   create_table "projects", force: true do |t|
@@ -57,6 +59,7 @@ ActiveRecord::Schema.define(version: 20140219233345) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

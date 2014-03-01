@@ -7,5 +7,6 @@ FactoryGirl.define do
     sequence :body do |n|
       n.to_s + Forgery(:lorem_ipsum).words(250, :random => true)
     end
+    published true
   end
 end

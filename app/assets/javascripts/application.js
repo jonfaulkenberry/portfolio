@@ -1,12 +1,13 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require foundation
-//= require_tree .
-//= require_tree ../../../vendor/assets/javascripts
+//= require foundation 
+//= require toastr
+//= require codemirror
 //= require turbolinks
 //= require nprogress
-//= require nprogress-turbolinks 
+//= require nprogress-turbolinks
+//= require_tree .
 
 NProgress.configure({
   showSpinner: false,

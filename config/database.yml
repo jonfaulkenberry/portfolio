@@ -15,12 +15,3 @@ test:
   password: <%= ENV['PASSWORD_TEST'] %>
   host: <%= ENV['HOSTNAME_TEST'] %>
   port: <%= ENV['PORT_TEST'] %>
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  database: <%= ENV['DO_DB_NAME'] %>
-  username: <%= ENV['DO_USERNAME'] %>
-  password: <%= ENV['DO_PASSWORD'] %>
-  host: <%= ENV['DO_HOSTNAME'] %>
-  port: <%= ENV['DO_PORT'] %>

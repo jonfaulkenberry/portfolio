@@ -37,7 +37,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      # queue "sudo /etc/init.d/nginx restart"
+      queue "sudo /home/jon/restart_nginx"
     end
   end
 end

@@ -1,5 +1,5 @@
 Portfolio::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks"  }
   resources :posts
   resources :projects
 
@@ -9,5 +9,9 @@ Portfolio::Application.routes.draw do
   get '/contact' => 'welcome#contact', as: 'contact'
   get '/manage' => 'welcome#manage', as: 'manage'
   get '/portfolio' => 'projects#index', as: 'portfolio'
-  get '/search' => 'welcome#search', as: 'search' 
+  get '/search' => 'welcome#search', as: 'search'
+  devise_scope :user do
+      get "/login" => "devise/sessions#new"
+      get "/logout" => "devise/sessions#destroy"
+  end
 end

@@ -17,11 +17,9 @@ class User < ActiveRecord::Base
     where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
+      user.role = "viewer"
       user.display_name = auth.info.name
       user.username = auth.info.nickname
-      if auth.provider == "github"
-        user.email = auth.info.email
-      end
      end
   end
 

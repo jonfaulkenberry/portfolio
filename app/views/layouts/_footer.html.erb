@@ -4,9 +4,7 @@
 			<p>
 				&copy; Copyright 2014 <%= link_to "Jon Faulkenberry", root_url %> | 
         <% if current_user.nil? %>
-          Sign In with
-          <%= link_to "GitHub", user_omniauth_authorize_path(:github) %> or
-          <%= link_to "Twitter", user_omniauth_authorize_path(:twitter) %>
+          <%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter) %>
 				<% else %>
 					<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
 				<% end %>

@@ -3,8 +3,8 @@
 		<div class="medium-12 columns">
 			<p>
 				&copy; Copyright 2014 <%= link_to "Jon Faulkenberry", root_url %> | 
-				<% if current_user.nil? %>
-					<%= link_to "Sign In", new_user_session_path %>
+        <% if current_user.nil? %>
+          <%= link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter) %>
 				<% else %>
 					<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
 				<% end %>

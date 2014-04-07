@@ -3,6 +3,8 @@ PostPolicy = Struct.new(:user, :post) do
     def resolve
       if user.nil?
         scope.where(:published => true)
+      elsif user.role == "viewer"
+        scope.where(:published => true)
       elsif user.role == "author"
         scope.where("published = true OR author_id =#{user.id}")
       elsif user.role == "owner"

@@ -2,8 +2,7 @@ class User < ActiveRecord::Base
   has_many :posts, foreign_key: "author_id"
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable,
-    :omniauthable, :registerable, :omniauth_providers => [:twitter]
+  devise :database_authenticatable, :rememberable, :omniauthable, :omniauth_providers => [:twitter]
 
   def owner?
     role == "owner"

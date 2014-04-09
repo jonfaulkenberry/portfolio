@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
-ruby '2.1.0'
+ruby '2.1.1'
 
 gem 'codemirror-rails'
 gem 'coffee-rails', '~> 4.0.0'

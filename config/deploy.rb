@@ -13,7 +13,7 @@ set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'log']
 
 task :environment do
-  invoke :'rvm:use[ruby-2.1.0]'
+  invoke :'rvm:use[ruby-2.1.1]'
 end
 
 task :setup => :environment do

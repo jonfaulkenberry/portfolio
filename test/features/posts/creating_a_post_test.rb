@@ -16,7 +16,7 @@ feature "As an owner, I want to create and publish posts" do
     page.text.must_include title
     page.text.must_include body
     page.has_css? "#author"
-    page.text.must_include @user.email
+    page.text.must_include @user.display_name
     page.text.must_include "Status: Unpublished"
   end
   scenario "owner publishes a new post" do
@@ -46,18 +46,11 @@ feature "As an author, I want to create but not publish posts" do
     page.text.must_include title
     page.text.must_include body
     page.has_css? "#author"
-    page.text.must_include @user.email
+    page.text.must_include @user.display_name
     page.text.must_include "Status: Unpublished"
   end
   scenario "author cannot publish posts" do
     visit new_post_path
     page.wont_have_field('Published')
-  end
-end
-
-feature "As a visitor, I cannot create a post" do
-  scenario "visitor cannot create new post" do
-    visit new_post_path
-    page.must_have_content "Sign in" 
   end
 end

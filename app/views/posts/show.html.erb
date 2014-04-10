@@ -6,7 +6,7 @@
     </p>
     <p id="author">
       <b>By:</b>
-      <%= @post.author.email %>
+      <%= @post.author.display_name %>
     </p>
     <p id="published">
       Status: <%= @post.published? ? "Published" : "Unpublished" %>

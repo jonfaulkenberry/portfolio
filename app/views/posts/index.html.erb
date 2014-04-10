@@ -7,7 +7,7 @@
         <article>
           <header>
             <h3><%= link_to post.title, post %></h3>
-            <p>Posted by <%= post.author.email %></p>
+            <p>Posted by <%= post.author.display_name %></p>
           </header>
           <section>
             <%= markdown post.body %>

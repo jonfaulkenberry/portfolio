@@ -10,20 +10,20 @@ Coveralls.wear!
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
+  
+  OmniAuth.config.test_mode = true
 
   def sign_in_as_author
     @user = create(:author)
-    visit new_user_session_path
-    fill_in "Email", with: @user.email
-    fill_in "Password", with: @user.password
-    click_on "Sign in"
+    OmniAuth.config.add_mock(:twitter, {:uid => @user.uid})
+    visit root_path
+    click_on "Sign In with Twitter"
   end
 
   def sign_in_as_owner
     @user = create(:owner)
-    visit new_user_session_path
-    fill_in "Email", with: @user.email
-    fill_in "Password", with: @user.password
-    click_on "Sign in"
+    OmniAuth.config.add_mock(:twitter, {:uid => @user.uid})
+    visit root_path
+    click_on "Sign In with Twitter"
   end
 end

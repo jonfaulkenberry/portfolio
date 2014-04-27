@@ -14,6 +14,9 @@ class PostsController < ApplicationController
     if request.path != post_path(@post)
       redirect_to @post, status: :moved_permanently
     end
+    @commentable = @post
+    @comments = @commentable.comments
+    @comment = Comment.new
   end
 
   # GET /posts/new

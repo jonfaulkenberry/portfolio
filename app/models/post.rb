@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
+  has_many :comments, as: :commentable
+  
   friendly_id :title, :use => [:slugged, :history]
   belongs_to :author, class_name: "User"
   validates :title, length: { in: 4..255 }

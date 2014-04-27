@@ -1,7 +1,13 @@
 Portfolio::Application.routes.draw do
+  get "comments/index"
+  get "comments/new"
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks"  }
-  resources :posts
-  resources :projects
+  resources :posts do
+    resources :comments
+  end
+  resources :projects do
+    resources :comments
+  end
 
   root 'welcome#index'
   get '/about' => 'welcome#about', as: 'about'

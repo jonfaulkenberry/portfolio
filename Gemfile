@@ -4,11 +4,7 @@ ruby "2.1.1"
 gem "rails", "~> 4.0"
 
 group :development do
-  gem "passenger", "~> 4.0"
-end
-
-group :production do
-  gem "passenger", "~> 4.0"
+  gem "letter_opener", "~> 1.2.0"
 end
 
 group :test do
@@ -40,6 +36,8 @@ gem "normalize-rails", "~> 3.0"
 gem "nprogress-rails", "~> 0.1"
 gem "omniauth", "~> 1.2"
 gem "omniauth-twitter", "~> 1.0"
+gem "passenger", "~> 4.0"
+gem "postmark-rails", "~> 0.7.0"
 gem "pundit", "~> 0.2"
 gem "pygments.rb", "~> 0.5"
 gem "rails-assets-toastr", "~> 2.0"

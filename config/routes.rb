@@ -6,7 +6,7 @@ Portfolio::Application.routes.draw do
   root 'welcome#index'
   get '/about' => 'welcome#about', as: 'about'
   get '/blog' => 'posts#index', as: 'blog'
-  get '/contact' => 'welcome#contact', as: 'contact'
+  match '/contact', to: 'welcome#contact', as: 'contact', via: [:get, :post]
   get '/manage' => 'welcome#manage', as: 'manage'
   get '/portfolio' => 'projects#index', as: 'portfolio'
   get '/search' => 'welcome#search', as: 'search'

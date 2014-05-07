@@ -22,18 +22,18 @@
     </ul><!-- /.social-icon -->
     <div class="medium-3 columns">&nbsp;</div><!-- /.medium-3 .columns -->
     <div class="medium-6 columns">
-      <form class="contact-form">
+      <form class="contact-form" action="" method="post">
         <div class="input-item">
           <label>Name <span class="required">*</span></label>
-          <input type="text" placeholder="Full name">
+          <input name="sender_name" type="text" placeholder="Full name">
         </div><!-- /.input-item -->
         <div class="input-item">
           <label>Email <span class="required">*</span></label>
-          <input type="email" placeholder="Email address">
+          <input name="sender_email" type="email" placeholder="Email address">
         </div><!-- /.input-item -->
         <div class="input-item">
-          <label>Messages <span class="required">*</span></label>
-          <textarea cols="10" rows="4" placeholder="Your message"></textarea>
+          <label>Message <span class="required">*</span></label>
+          <textarea name="message" cols="10" rows="4" placeholder="Your message"></textarea>
         </div><!-- /.input-item -->
         <div class="input-item text-center">
           <input class="button small success radius" type="submit" value="Submit">

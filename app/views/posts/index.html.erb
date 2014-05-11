@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="medium-12 columns">
+  <div class="medium-8 columns">
     <% if policy_scope(@posts).empty? %>
       <h3>There are no posts to show!</h3>
     <% else %>
@@ -7,14 +7,15 @@
         <article>
           <header>
             <h3><%= link_to post.title, post %></h3>
-            <p>Posted by <%= post.author.display_name %></p>
+            <p><%= post.created_at.to_date %></p>
           </header>
           <section>
-            <%= markdown post.body %>
+            <%= post.description %>
           </section>
         </article>
         <hr />
       <% end %>
     <% end %>
   </div>
+  <%= render "posts/sidebar" %>
 </div>

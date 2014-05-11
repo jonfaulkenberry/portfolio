@@ -1,11 +1,21 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :archive, only: [:show, :index, :posts_by_month, :search]
+  before_action :all_posts, only: [:index]
+  before_action :authenticate_user!, except: [:index, :show, :posts_by_month]
 
-  # GET /posts
-  # GET /posts.json
-  def index
-    @posts = policy_scope(Post)
+  def posts_by_month
+    @posts = all_posts.where("MONTH(created_at) = ? and YEAR(created_at) = ?", 
+      params[:month], params[:year])
+    render :index
+  end
+  
+  def search
+    if params["search"]
+      @posts = all_posts.where("title LIKE ? OR description LIKE ? OR body LIKE ?", 
+        params[:search], params[:search], params[:search])
+    end
+    render :index
   end
 
   # GET /posts/1
@@ -71,9 +81,23 @@ class PostsController < ApplicationController
   def set_post
     @post = policy_scope(Post).friendly.find(params[:id])
   end
+  
+  def all_posts
+    @posts = policy_scope(Post)
+  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
     params.require(:post).permit(*policy(@post || Post).permitted_attributes)
+  end
+  
+  def archive
+    @posts_by_month = all_posts.sort.reverse.group_by do |post| 
+      { 
+        "month_name_and_year" => post.created_at.strftime("%B %Y"),
+        "month" => post.created_at.month,
+        "year" => post.created_at.year 
+      }
+    end
   end
 end

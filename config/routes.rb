@@ -9,7 +9,8 @@ Portfolio::Application.routes.draw do
   match '/contact', to: 'welcome#contact', as: 'contact', via: [:get, :post]
   get '/manage' => 'welcome#manage', as: 'manage'
   get '/portfolio' => 'projects#index', as: 'portfolio'
-  get '/search' => 'welcome#search', as: 'search'
+  get '/search' => 'posts#search', as: 'search'
+  get '/posts/by-month/:month/:year' => 'posts#posts_by_month'
   devise_scope :user do
       get "/login" => "devise/sessions#new"
       get "/logout" => "devise/sessions#destroy"

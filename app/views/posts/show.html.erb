@@ -1,29 +1,18 @@
 <div class="row">
-  <div class="medium-12 columns">
-    <p id="title">
-      <strong>Title:</strong>
-      <%= @post.title %>
-    </p>
-    <p id="author">
-      <b>By:</b>
-      <%= @post.author.display_name %>
-    </p>
-    <p id="published">
-      Status: <%= @post.published? ? "Published" : "Unpublished" %>
-    </p>
-    <p>
-      <% if policy(@post).edit? %>
-        <%= link_to "Edit Post", edit_post_path(@post), :class => "button tiny radius" %>
-      <% end %>
-      <% if policy(@post).destroy? %>
-        <%= link_to "Delete Post", @post, :class => "button tiny radius alert", :method => :delete, :data => { :confirm => "Are you sure?" } %>
-      <% end %>
-    </p>   
-    <p>
-      <strong>Body:</strong>
+  <div class="medium-8 columns">  
+    <header>
+      <h1><%= @post.title %></h1>   
+      <% if !@post.published? %>
+        <p>Unpublished</p>
+      <% end %>    
+      <p>
+        Posted <%= @post.created_at.to_date %> by <%= @post.author.display_name %>
+      </p>
+    </header>
+    <article>
       <%= markdown @post.body %>
-    </p>
-    <p><%= render "posts/disqus" %></p>
-    <%= link_to 'Back', posts_path %>
+      <%= render "posts/disqus" %>
+    </article>
   </div>
+  <%= render "posts/sidebar" %>
 </div>

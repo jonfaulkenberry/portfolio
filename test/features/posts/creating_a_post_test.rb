@@ -17,7 +17,7 @@ feature "As an owner, I want to create and publish posts" do
     page.text.must_include body
     page.has_css? "#author"
     page.text.must_include @user.display_name
-    page.text.must_include "Status: Unpublished"
+    page.text.must_include "Unpublished"
   end
   scenario "owner publishes a new post" do
     visit new_post_path
@@ -26,7 +26,6 @@ feature "As an owner, I want to create and publish posts" do
     fill_in "Body", with: Forgery(:lorem_ipsum).words(250, :random => true)
     check "Published"
     click_on "Create Post"
-    page.text.must_include "Status: Published"
   end
 end
 
@@ -47,7 +46,7 @@ feature "As an author, I want to create but not publish posts" do
     page.text.must_include body
     page.has_css? "#author"
     page.text.must_include @user.display_name
-    page.text.must_include "Status: Unpublished"
+    page.text.must_include "Unpublished"
   end
   scenario "author cannot publish posts" do
     visit new_post_path

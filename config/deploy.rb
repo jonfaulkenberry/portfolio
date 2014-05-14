@@ -2,6 +2,7 @@ require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
 require 'mina/rvm'
+require 'mina_extensions/sidekiq'
 
 set :domain, 'wfe.jonfaulkenberry.com'
 set :user, 'jon'
@@ -35,6 +36,7 @@ task :deploy => :environment do
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
+    invoke :'sidekiq:restart'
 
     to :launch do
       queue "sudo /home/jon/restart_nginx"

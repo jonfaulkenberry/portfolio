@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   
   def contact
     if request.post?  
-      ContactFormMailer.contact_form_email(params[:sender_name], params[:sender_email], params[:message]).deliver
+      ContactFormMailer.delay.contact_form_email(params[:sender_name], params[:sender_email], params[:message])
       flash[:notice] = "Your message has been sent!"
       redirect_to root_path
     end

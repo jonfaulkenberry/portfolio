@@ -1,7 +1,11 @@
 Portfolio::Application.routes.draw do
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+  
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks"  }
   resources :posts
   resources :projects
+  
 
   root 'welcome#index'
   get '/about' => 'welcome#about', as: 'about'

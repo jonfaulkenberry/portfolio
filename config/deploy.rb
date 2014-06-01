@@ -11,7 +11,7 @@ set :deploy_to, '/var/www/jonfaulkenberry.com'
 set :repository, 'https://github.com/jonfaulkenberry/portfolio.git'
 set :branch, 'master'
 
-set :shared_paths, ['config/database.yml, config/local_env.yml', 'log']
+set :shared_paths, ['config/database.yml', 'config/local_env.yml', 'log']
 
 task :environment do
   invoke :'rvm:use[ruby-2.1.1]'

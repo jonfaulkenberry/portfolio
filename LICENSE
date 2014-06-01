@@ -1,19 +1,3 @@
-portfolio
-=========
-[ ![Codeship Status for jonfaulkenberry/portfolio](https://www.codeship.io/projects/a2096370-823e-0131-9d4e-36899b34a261/status?branch=master)](https://www.codeship.io/projects/14819)
-[![Coverage Status](https://coveralls.io/repos/jonfaulkenberry/portfolio/badge.png)](https://coveralls.io/r/jonfaulkenberry/portfolio)
-[![Dependency Status](https://gemnasium.com/jonfaulkenberry/portfolio.svg)](https://gemnasium.com/jonfaulkenberry/portfolio)
-[![Code Climate](https://codeclimate.com/github/jonfaulkenberry/portfolio.png)](https://codeclimate.com/github/jonfaulkenberry/portfolio)
-
-####About
-
-The personal website of Jon Faulkenberry, built with Rails and Zurb Foundation.
-
-####Installation
-In the jonfaulkenberry.com production environment, the application is deployed using mina to a server running Phusion Passenger with nginx and MySQL. In addition, the application uses Sidekiq for background jobs, which also runs on the production server. All configuration is done using environment variables.
-
-####License
-
 The MIT License (MIT)
 
 Copyright (c) 2014 Jon Faulkenberry

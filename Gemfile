@@ -30,7 +30,7 @@ gem "jbuilder", "~> 1.5"
 gem "jquery-rails", "~> 3.1"
 gem "jquery-turbolinks", "~> 2.0"
 gem "mina", "~> 0.3"
-gem 'mina_extensions'
+gem "mina-sidekiq"
 gem "minitest-rails", "~> 0.9"
 gem "mysql2", "~> 0.3"
 gem "normalize-rails", "~> 3.0"

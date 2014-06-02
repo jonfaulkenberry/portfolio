@@ -19,9 +19,11 @@ group :doc do
   gem "sdoc", "~> 0.4", {:require=>false}
 end
 
+gem "carrierwave"
 gem "codemirror-rails", "~> 3.22"
 gem "coffee-rails", "~> 4.0"
 gem "devise", "~> 3.2"
+gem "fog"
 gem "font_assets", "~> 0.1"
 gem "font-awesome-rails", "~> 4.0"
 gem "foundation-rails", "~> 5.1"

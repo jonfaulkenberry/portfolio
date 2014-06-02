@@ -30,6 +30,20 @@ module Portfolio
     
     config.action_mailer.delivery_method = :postmark
     config.action_mailer.postmark_settings = { :api_key => ENV["POSTMARK_API_KEY"] }
+    
+    CarrierWave.configure do |config|
+      config.fog_credentials = {
+        :provider               => 'AWS',
+        :aws_access_key_id      => ENV['AWS_ACCESS_KEY'],
+        :aws_secret_access_key  => ENV['AWS_SECRET_KEY'],
+        :region                 => ENV['AWS_REGION'],
+        :host                   => ENV['S3_HOST'],
+        :endpoint               => ENV['S3_ENDPOINT']
+      }
+      config.fog_directory  = ENV['S3_FOG_DIR']
+      config.fog_public     = false
+      config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
+    end
   end
 end
 

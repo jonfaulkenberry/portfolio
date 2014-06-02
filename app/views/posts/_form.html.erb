@@ -38,4 +38,10 @@
 		<%= link_to 'Back', f.object.new_record? ? manage_path : post_path(f.object), :class => "button tiny radius" %>
   </div>
   
+  <%= form_for :attachment, html: { multipart: true } do |f| %>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+    <% end %>
+  
 <% end %>

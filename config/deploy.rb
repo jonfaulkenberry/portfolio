@@ -11,7 +11,7 @@ set :deploy_to, '/var/www/jonfaulkenberry.com'
 set :repository, 'https://github.com/jonfaulkenberry/portfolio.git'
 set :branch, 'master'
 
-set :shared_paths, ['config/database.yml', 'config/local_env.yml', 'log']
+set :shared_paths, ['config/database.yml', 'config/local_env.yml', 'config/sidekiq.yml', 'log']
 
 task :environment do
   invoke :'rvm:use[ruby-2.1.1]'
@@ -29,6 +29,9 @@ task :setup => :environment do
   
   queue! %[touch "#{deploy_to}/shared/config/local_env.yml"]
   queue  %[echo "-----> Be sure to edit 'shared/config/local_env.yml'."]
+  
+  queue! %[touch "#{deploy_to}/shared/config/sidekiq.yml"]
+  queue  %[echo "-----> Be sure to edit 'shared/config/sidekiq.yml'."]
   
   # sidekiq needs a place to store its pid file and log file
   queue! %[mkdir -p "#{deploy_to}/shared/pids/"]

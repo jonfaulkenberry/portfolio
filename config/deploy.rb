@@ -4,12 +4,12 @@ require 'mina/git'
 require 'mina/rvm'
 require 'mina_sidekiq/tasks'
 
-set :domain, 'wfe.jonfaulkenberry.com'
-set :user, 'jon'
-set :port, '8064'
-set :deploy_to, '/var/www/jonfaulkenberry.com'
-set :repository, 'https://github.com/jonfaulkenberry/portfolio.git'
-set :branch, 'master'
+set :domain, ENV['MINA_DOMAIN']
+set :user, ENV['MINA_USER']
+set :port, ENV['MINA_PORT']
+set :deploy_to, ENV['MINA_DEPLOY_TO']
+set :repository, ENV['MINA_REPO']
+set :branch, ENV['MINA_BRANCH']
 
 set :shared_paths, ['config/database.yml', 'config/local_env.yml', 'config/sidekiq.yml', 'log']
 
@@ -23,25 +23,18 @@ task :setup => :environment do
 
   queue! %[mkdir -p "#{deploy_to}/shared/config"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/config"]
+  
+  queue! %[mkdir -p "#{deploy_to}/shared/pids/"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/pids"]
 
   queue! %[touch "#{deploy_to}/shared/config/database.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/database.yml'."]
-  
   queue! %[touch "#{deploy_to}/shared/config/local_env.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/local_env.yml'."]
-  
   queue! %[touch "#{deploy_to}/shared/config/sidekiq.yml"]
-  queue  %[echo "-----> Be sure to edit 'shared/config/sidekiq.yml'."]
-  
-  # sidekiq needs a place to store its pid file and log file
-  queue! %[mkdir -p "#{deploy_to}/shared/pids/"]
-  queue! %[mkdir -p "#{deploy_to}/shared/log/"]
 end
 
 desc "Deploys the current version to the server."
 task :deploy => :environment do
   deploy do
-    # stop accepting new workers
     invoke :'sidekiq:quiet'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
@@ -50,7 +43,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      queue "sudo /home/jon/restart_nginx"
+      queue 'sudo /etc/init.d/nginx restart'
       invoke :'sidekiq:restart'
     end
   end

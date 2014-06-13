@@ -14,7 +14,7 @@ set :branch, ENV['MINA_BRANCH']
 set :shared_paths, ['config/database.yml', 'config/local_env.yml', 'config/sidekiq.yml', 'log']
 
 task :environment do
-  invoke :'rvm:use[ruby-2.1.1]'
+  invoke :'rvm:use[ruby-2.1.2]'
 end
 
 task :setup => :environment do

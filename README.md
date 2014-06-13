@@ -13,8 +13,6 @@ In the jonfaulkenberry.com production environment, the application is deployed u
 
 ####License
 
-The MIT License (MIT)
-
 Copyright (c) 2014 Jon Faulkenberry
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

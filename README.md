@@ -9,7 +9,7 @@ portfolio [ ![Codeship Status for jonfaulkenberry/portfolio](https://www.codeshi
 The personal website of Jon Faulkenberry, built with Rails and Zurb Foundation.
 
 ####Installation
-In the jonfaulkenberry.com production environment, the application is deployed using mina to a server running Phusion Passenger with nginx and MySQL. In addition, the application uses Sidekiq for background jobs, which also runs on the production server. All configuration is done using environment variables.
+In the [jonfaulkenberry.com](http://jonfaulkenberry.com/) production environment, the application is continuously deployed by [Codeship](https://www.codeship.io/) to a [Digital Ocean droplet running CentOS 6.5 with Phusion Passenger and nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-rails-apps-using-passenger-with-nginx-on-centos-6-5) and MySQL using [mina](https://github.com/mina-deploy/mina). In addition, the production server runs an instance of [Sidekiq](https://github.com/mperham/sidekiq) for background jobs, which consumes a queue stored in a local redis server. All configuration is done using environment variables which are stored in config/local_env.yml
 
 ####License
 

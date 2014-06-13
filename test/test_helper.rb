@@ -6,7 +6,7 @@ require "minitest/rails/capybara"
 require "minitest/pride"
 require "coveralls"
 
-Coveralls.wear!
+Coveralls.wear!('rails')
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods

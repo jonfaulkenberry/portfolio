@@ -1,6 +1,8 @@
 Portfolio::Application.routes.draw do
   require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
+  authenticate :user, lambda { |u| u.owner? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
   
   resources :posts
   resources :projects

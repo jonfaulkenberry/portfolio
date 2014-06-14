@@ -3,6 +3,7 @@ portfolio [ ![Codeship Status for jonfaulkenberry/portfolio](https://www.codeshi
 [![Coverage Status](https://coveralls.io/repos/jonfaulkenberry/portfolio/badge.png)](https://coveralls.io/r/jonfaulkenberry/portfolio)
 [![Dependency Status](https://gemnasium.com/jonfaulkenberry/portfolio.svg)](https://gemnasium.com/jonfaulkenberry/portfolio)
 [![Code Climate](https://codeclimate.com/github/jonfaulkenberry/portfolio.png)](https://codeclimate.com/github/jonfaulkenberry/portfolio)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/jonsportfolio.svg)](https://saucelabs.com/u/jonsportfolio)
 
 ####About
 

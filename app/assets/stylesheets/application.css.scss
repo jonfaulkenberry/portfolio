@@ -80,3 +80,23 @@ a.button:visited { color: #fff; }
 .search-form {
   display: inline;
 }
+/******* View Specific Styles ********/
+
+/* Homepage */
+body[data-rails-controller="welcome"][data-rails-controller-action="index"] { 
+  padding-top: 0; 
+  background: image-url("unsplash_bg.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+
+body[data-rails-controller="welcome"][data-rails-controller-action="index"] #yield {
+  margin-top: 0; 
+}
+
+/* Contact Page */
+body[data-rails-controller="welcome"][data-rails-controller-action="contact"] {
+  background-color: #444;
+}

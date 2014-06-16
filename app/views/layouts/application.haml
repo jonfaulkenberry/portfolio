@@ -11,11 +11,12 @@
     =javascript_include_tag "vendor/modernizr"
     =javascript_include_tag "application"
     =csrf_meta_tags
-    
-  %body#top
+
+  %body#top{ :data => {'rails-controller' => "#{controller_name}", 'rails-controller-action' => "#{action_name}"}}
+  
     =render 'layouts/topnav'
-    #yield= yield
+    
+    #rails-main-content= yield
+    
     =render 'layouts/footer'
     =render 'layouts/flash'
-    =yield :inline_scripts
-    =yield :inline_styles

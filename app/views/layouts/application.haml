@@ -1,0 +1,21 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en" }
+  %head
+    %meta{ :charset => "UTF-8" }
+    %title Jon Faulkenberry
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1" }
+    %meta{ :name => "description", :content => "Jon Faulkenberry - A Seattle Developer" }
+    %meta{ :name => "author", :content => "Jon Faulkenberry" }
+
+    =stylesheet_link_tag "application"
+    =javascript_include_tag "vendor/modernizr"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+    
+  %body#top
+    =render 'layouts/topnav'
+    #yield= yield
+    =render 'layouts/footer'
+    =render 'layouts/flash'
+    =yield :inline_scripts
+    =yield :inline_styles

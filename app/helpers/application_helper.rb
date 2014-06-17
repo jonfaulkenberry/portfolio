@@ -1,14 +1,5 @@
 module ApplicationHelper
-  # translate the rails flash levels to appropriate Zurb Foundation css classes
-  # used by Toastr to determine which type of toast to show
-  def flash_class(level)
-    case level
-      when :notice then "info"
-      when :success then "success"
-      when :error then "error"
-      when :alert then "warning"
-    end
-  end
+    
   class HTMLwithPygments < Redcarpet::Render::HTML
     def block_code(code, language)
       sha = Digest::SHA1.hexdigest(code)

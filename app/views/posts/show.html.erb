@@ -11,7 +11,7 @@
     </header>
     <article>
       <%= markdown @post.body %>
-      <%= render "posts/disqus" %>
+      <%= render "posts/disqus" if Rails.env.production? %>
     </article>
   </div>
   <%= render "posts/sidebar" %>

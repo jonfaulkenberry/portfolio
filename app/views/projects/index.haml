@@ -1,0 +1,9 @@
+.row
+  .medium-12.columns
+    - if @projects.empty?
+      %h3 There are no projects to show!
+    - else
+      - @projects.each do |project|
+        .project{id: dom_id(project)}
+          %h3= link_to project.name, project
+          %article= project.technologies_used

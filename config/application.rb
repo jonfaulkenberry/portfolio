@@ -9,9 +9,9 @@ module Portfolio
 
     config.secret_key_base = 'faulkenberry-portfolio'
 
-    config.assets.precompile += ["vendor*", "vendor/**/*"]
+    config.assets.precompile += %w(fonts/*.*)
+    config.assets.precompile += %w(img/*.*)
     config.assets.precompile += ["codemirror*", "codemirror/**/*"]
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.woff *.ttf *.eot)
 
     config.generators do |g|
       g.test_framework :mini_test, :spec => true

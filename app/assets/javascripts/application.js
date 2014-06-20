@@ -9,11 +9,7 @@
 //= require nprogress-turbolinks
 //= require_tree .
 
-NProgress.configure({
-  showSpinner: false,
-  ease: 'ease',
-  speed: 500
-});
+//= stub google_analytics
 
 $( document ).ready(function() {
   $( ".search-btn, .search-back-icon, #search" ).css("display", "none");

@@ -1,0 +1,16 @@
+.medium-4.columns
+  %aside
+    - if @post
+      %p
+        - if policy(@post).edit?
+          %div= link_to "Edit Post", edit_post_path(@post)
+        - if policy(@post).destroy?
+          %div
+            = link_to "Delete Post", @post,                                |
+              :method => :delete, :data => { :confirm => "Are you sure?" } |
+    %h6 Posts by Month
+    %ul#posts-by-month
+      - @posts_by_month.each do |date, posts|
+        %li
+          %a{href: "/posts/by-month/#{date['month']}/#{date['year']}"}
+            = date['month_name_and_year']

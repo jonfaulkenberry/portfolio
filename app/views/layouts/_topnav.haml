@@ -1,0 +1,26 @@
+%header.mathead.fixed
+  .row  
+    %nav.top-bar{ :data => {'topbar' => true}}
+  
+      %ul.title-area
+        %li.name
+          %h1.hide-for-small-only= link_to "Jon Faulkenberry", root_url
+          %h1.show-for-small-only= link_to "JF", root_url
+        %li.toggle-topbar.menu-icon
+          %a{ :href => "#" }
+          
+      %section.top-bar-section
+        %ul.right
+          - if !current_user.nil? && current_user.owner?
+            %li= link_to "Manage", manage_url, :class => "topnav-link"
+          %li= link_to "About", about_url, :class => "topnav-link"
+          %li= link_to "Blog", blog_url, :class => "topnav-link"
+          %li= link_to "Portfolio", portfolio_url, :class => "topnav-link"
+
+          =form_tag("/search", method: "get", :class => "search-form") do
+            %li= text_field_tag :search, params[:search]
+            %li= submit_tag "Search", :name => nil, :class => "search-btn button small radius"
+            %li
+              %i.search-icon.fa.fa-search.fa-lg &nbsp;
+            %li
+              %i.search-back-icon.fa.fa-arrow-circle-left.fa-lg &nbsp;

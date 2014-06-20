@@ -32,8 +32,9 @@ Portfolio::Application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
   
-  # Precompile modernizr
+  # Precompile modernizr and Google Analytics javascripts
   config.assets.precompile += %w( vendor/modernizr.js )
+  config.assets.precompile += %w( google_analytics.js )
   
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true

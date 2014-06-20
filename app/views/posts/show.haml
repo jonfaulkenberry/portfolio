@@ -1,0 +1,12 @@
+.row
+  .medium-8.columns
+    %header
+      %h1= @post.title
+      - if !@post.published?
+        %p Unpublished
+      %p
+        Posted #{@post.created_at.to_date} by #{@post.author.display_name}
+    %article
+      = markdown @post.body
+      = render "posts/disqus" if Rails.env.production?
+  = render "posts/sidebar"

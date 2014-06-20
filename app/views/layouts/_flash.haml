@@ -1,0 +1,3 @@
+- flash.each do |type, message|
+  %script{ :type => "text/javascript" }
+    toastr.info(#{raw message.inspect});

@@ -1,9 +1,0 @@
-<% content_for :inline_scripts do %>
-  <% if not flash.empty? %>
-    <script type="text/javascript">
-      <% flash.each do |type, message| %>
-        toastr.<%= flash_class(type) %>(<%== message.inspect %>);
-      <% end %>
-    </script>
-  <% end %>
-<% end %>

@@ -198,60 +198,7 @@ textarea {
 }
 /* #Themes Styles
 ================================================== */
-@font-face {
-  font-family: 'Raleway-Light';
-  src: url('/assets/raleway/Raleway-Light.eot');
-  src: url('/assets/raleway/Raleway-Light.eot?#iefix') format('embedded-opentype'),
-  url('/assets/raleway/Raleway-Light.woff') format('woff'),
-  url('/assets/raleway/Raleway-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Raleway-Regular';
-  src: url('/assets/raleway/Raleway-Regular.eot');
-  src: url('/assets/raleway/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-  url('/assets/raleway/Raleway-Regular.woff') format('woff'),
-  url('/assets/raleway/Raleway-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Raleway-Medium';
-  src: url('/assets/raleway/Raleway-Medium.eot');
-  src: url('/assets/raleway/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
-  url('/assets/raleway/Raleway-Medium.woff') format('woff'),
-  url('/assets/raleway/Raleway-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Raleway-SemiBold';
-  src: url('/assets/raleway/Raleway-SemiBold.eot');
-  src: url('/assets/raleway/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
-  url('/assets/raleway/Raleway-SemiBold.woff') format('woff'),
-  url('/assets/raleway/Raleway-SemiBold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Raleway-Bold';
-  src: url('/assets/raleway/Raleway-Bold.eot');
-  src: url('/assets/raleway/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
-  url('/assets/raleway/Raleway-Bold.woff') format('woff'),
-  url('/assets/raleway/Raleway-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Satisfy-Regular';
-  src: url('/assets/satisfy/Satisfy-Regular.eot');
-  src: url('/assets/satisfy/Satisfy-Regular.eot?#iefix') format('embedded-opentype'),
-  url('/assets/satisfy/Satisfy-Regular.woff') format('woff'),
-  url('/assets/satisfy/Satisfy-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 /* BORDER BOTTOM */
 .line {
   display: block;
@@ -447,12 +394,12 @@ textarea {
 .copy {
   color: #979797;
   text-align: center;
-}
-.copy a, .copy a:visited {
-  color: #979797;
-}
-.copy a:hover {
-  color: #000;
+  a, a:visited {
+    color: #979797;
+  }
+  a:hover {
+    color: #000;
+  }
 }
 /* #Media queries are built using ems in Foundation.
 ============================================================== */

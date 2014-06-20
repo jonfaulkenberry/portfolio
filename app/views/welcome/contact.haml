@@ -1,0 +1,43 @@
+%section#contact.contact-wrapper
+  .row
+    .medium-12.columns
+      %h3 Contact Me
+  .row
+    %ul.social-icon
+      %li
+        %a.github{href: "//github.com/jonfaulkenberry"}
+          %i.fa.fa-github
+      %li
+        %a.linkedin{href: "//www.linkedin.com/in/faulkenberry"}
+          %i.fa.fa-linkedin
+      %li
+        %a.twitter{href: "//twitter.com/jonfaulkenberry"}
+          %i.fa.fa-twitter
+      %li
+        %a.google-plus{href: "//plus.google.com/107408243070830845692/"}
+          %i.fa.fa-google-plus
+      %li
+        %a.flickr{href: "//www.flickr.com/photos/jonfaulkenberry"}
+          %i.fa.fa-flickr
+  
+    .medium-3.columns  
+    .medium-6.columns
+      %form.contact-form{action: "", method: "post"}
+        .input-item
+          %label
+            Name
+            %span.required *
+          %input{name: "sender_name", placeholder: "Full name", type: "text"}/
+        .input-item
+          %label
+            Email
+            %span.required *
+          %input{name: "sender_email", placeholder: "Email address", type: "email"}/
+        .input-item
+          %label
+            Message
+            %span.required *
+          %textarea{cols: "10", name: "message", placeholder: "Your message", rows: "4"}
+        .input-item.text-center
+          %input.button.small.success.radius{type: "submit", value: "Submit"}/
+    .medium-3.columns  

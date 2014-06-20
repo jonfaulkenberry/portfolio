@@ -9,11 +9,7 @@ module Portfolio
 
     config.secret_key_base = 'faulkenberry-portfolio'
 
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'img')
-    
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.ttf *.woff *.eot)
-
+    config.assets.precompile += ["vendor*", "vendor/**/*"]
     config.assets.precompile += ["codemirror*", "codemirror/**/*"]
 
     config.generators do |g|

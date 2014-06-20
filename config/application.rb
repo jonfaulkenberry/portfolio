@@ -11,6 +11,8 @@ module Portfolio
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
     config.assets.paths << Rails.root.join('vendor', 'assets', 'img')
+    
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.ttf *.woff *.eot)
 
     config.assets.precompile += ["codemirror*", "codemirror/**/*"]
 

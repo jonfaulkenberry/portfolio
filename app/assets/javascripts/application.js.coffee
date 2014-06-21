@@ -7,8 +7,8 @@
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
-//= stub google_analytics
 //= require_tree .
+//= stub google_analytics
 
 $ ->
   $(document).foundation()

@@ -8,10 +8,12 @@ module Portfolio
     config.i18n.enforce_available_locales = false
 
     config.secret_key_base = 'faulkenberry-portfolio'
-
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
-
+    
+    config.assets.paths << "#{Rails.root}/vendor/assets/**/*"
+    
     config.assets.precompile += ["codemirror*", "codemirror/**/*"]
+    config.assets.precompile << /\.(?:png|gif|jpg|jpeg)$/
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
     config.generators do |g|
       g.test_framework :mini_test, :spec => true
@@ -27,6 +29,8 @@ module Portfolio
         ENV[key.to_s] = value
       end if File.exists?(env_file)
     end
+    
+      config.assets.digest = true
   end
 end
 

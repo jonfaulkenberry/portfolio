@@ -8,7 +8,7 @@ module Portfolio
     config.i18n.enforce_available_locales = false
 
     config.secret_key_base = 'faulkenberry-portfolio'
-    
+
     config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
     config.assets.paths << "#{Rails.root}/vendor/assets/img"
     

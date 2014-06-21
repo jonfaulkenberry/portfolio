@@ -82,7 +82,7 @@ a.button:visited { color: #fff; }
 
 body[data-rails-controller="welcome"][data-rails-controller-action="index"] { 
   padding-top: 0; 
-  background: image-url("unsplash_bg.png") no-repeat center center fixed; 
+  background: asset-url("unsplash_bg.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

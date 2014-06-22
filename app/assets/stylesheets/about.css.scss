@@ -1,0 +1,22 @@
+.about-wrapper {
+  background-color: transparent;
+  
+  h3 {
+    text-align: center;
+  }
+  
+  img {
+    display: block;
+    width: 8.125rem;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 4px;
+    margin: 0 auto 0.9375rem;
+  }
+}
+
+.col-progress {
+  margin-top: 2.188rem;
+}

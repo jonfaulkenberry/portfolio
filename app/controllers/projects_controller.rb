@@ -5,6 +5,13 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
   
+  def tags
+    if params[:tag]
+      @projects = Project.tagged_with(params[:tag])
+    end
+    render :index
+  end
+  
   def new
     @project = Project.new
   end
@@ -44,7 +51,7 @@ class ProjectsController < ApplicationController
   
   private
   def project_params
-    params.require(:project).permit(:name, :technologies_used)
+    params.require(:project).permit(:name, :technologies_used, :tag_list)
   end
   
   private

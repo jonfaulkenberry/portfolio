@@ -8,6 +8,7 @@
           %header
             %h3= link_to post.title, post
             %p= post.created_at.to_date
+            %p= raw "Tags: #{post_tag_list(post)}"
           %section= post.description
         %hr/
   = render "posts/sidebar"

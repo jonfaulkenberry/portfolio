@@ -15,6 +15,8 @@ Portfolio::Application.routes.draw do
   get '/portfolio' => 'projects#index', as: 'portfolio'
   get '/search' => 'posts#search', as: 'search'
   get '/posts/by-month/:month/:year' => 'posts#posts_by_month'
+  get '/posts/tags/:tag' => 'posts#tags', as: 'post_tag'
+  get '/projects/tags/:tag' => 'projects#tags', as: 'project_tag'
   
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
     

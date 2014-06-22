@@ -1,4 +1,4 @@
-PostPolicy = Struct.new(:user, :post) do
+ProjectPolicy = Struct.new(:user, :project) do
   self::Scope = Struct.new(:user, :scope) do
     def resolve
       if user.nil?
@@ -25,12 +25,12 @@ PostPolicy = Struct.new(:user, :post) do
   
   def edit?
     return false if user.nil?
-    (user.owner? || (user.author? && post.author == user))
+    (user.owner? || (user.author? && project.author == user))
   end
 
   def destroy?
     return false if user.nil?
-    (user.owner? || (user.author? && post.author == user))
+    (user.owner? || (user.author? && project.author == user))
   end 
 
   def permitted_attributes

@@ -8,9 +8,15 @@
           %div
             = link_to "Delete Post", @post,                                |
               :method => :delete, :data => { :confirm => "Are you sure?" } |
+
     %h6 Posts by Month
     %ul#posts-by-month
       - @posts_by_month.each do |date, posts|
         %li
           %a{href: "/posts/by-month/#{date['month']}/#{date['year']}"}
             = date['month_name_and_year']
+  
+    %h6 Tags
+    %ul#posts-by-tag
+      - Post.tag_counts.sort_by {|tag| tag.count}.reverse.each do |t|
+        %li= link_to "#{t.name} (#{t.count})", post_tag_path(t.name)

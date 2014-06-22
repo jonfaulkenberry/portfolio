@@ -16,7 +16,7 @@ feature "As a search engine I want friendly urls for posts" do
   scenario %q{posts should have friendly urls that update when the title
     is updated but still honor old urls; the old url should redirect
     to the new url'} do
-    sign_in_as_author
+    sign_in_as_owner
     prev_post_path = post_path(@post)
     prev_post_slug = @post.slug
     post_id = @post.id

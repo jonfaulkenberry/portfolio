@@ -1,12 +1,8 @@
 PostPolicy = Struct.new(:user, :post) do
   self::Scope = Struct.new(:user, :scope) do
     def resolve
-      if user.nil?
+      if user.nil? || user.role == "viewer"
         scope.where(:published => true)
-      elsif user.role == "viewer"
-        scope.where(:published => true)
-      elsif user.role == "author"
-        scope.where("published = true OR author_id =#{user.id}")
       elsif user.role == "owner"
         scope.all
       end
@@ -15,7 +11,7 @@ PostPolicy = Struct.new(:user, :post) do
 
   def create?
     return false if user.nil?
-    user.author?
+    user.owner?
   end
 
   def publish?
@@ -25,19 +21,17 @@ PostPolicy = Struct.new(:user, :post) do
   
   def edit?
     return false if user.nil?
-    (user.owner? || (user.author? && post.author == user))
+    user.owner?
   end
 
   def destroy?
     return false if user.nil?
-    (user.owner? || (user.author? && post.author == user))
+    user.owner?
   end 
 
   def permitted_attributes
-    if publish?
+    if user.owner?
       [:title, :body, :description, :published, :tag_list]
-    elsif create?
-      [:title, :body, :description, :tag_list]
     end
   end
 end

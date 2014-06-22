@@ -13,8 +13,8 @@ class ActiveSupport::TestCase
   
   OmniAuth.config.test_mode = true
 
-  def sign_in_as_author
-    @user = create(:author)
+  def sign_in_as_viewer
+    @user = create(:viewer)
     OmniAuth.config.add_mock(:twitter, {:uid => @user.uid})
     visit root_path
     click_on "Sign In with Twitter"

@@ -7,11 +7,11 @@ Portfolio::Application.routes.draw do
   resources :posts
   resources :projects
   
-  root 'welcome#index'
-  get '/about' => 'welcome#about', as: 'about'
+  root 'static_pages#index'
+  get '/about' => 'static_pages#about', as: 'about'
   get '/blog' => 'posts#index', as: 'blog'
-  match '/contact', to: 'welcome#contact', as: 'contact', via: [:get, :post]
-  get '/manage' => 'welcome#manage', as: 'manage'
+  match '/contact', to: 'static_pages#contact', as: 'contact', via: [:get, :post]
+  get '/manage' => 'static_pages#manage', as: 'manage'
   get '/portfolio' => 'projects#index', as: 'portfolio'
   get '/search' => 'posts#search', as: 'search'
   get '/posts/by-month/:month/:year' => 'posts#posts_by_month'

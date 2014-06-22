@@ -6,4 +6,5 @@
       - @projects.each do |project|
         .project{id: dom_id(project)}
           %h3= link_to project.name, project
+          %p= raw "Tags: #{project.tag_list.map{ |t| link_to t, project_tag_path(t) }.join( ', ')}"
           %article= project.technologies_used

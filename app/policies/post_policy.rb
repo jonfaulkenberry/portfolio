@@ -35,9 +35,9 @@ PostPolicy = Struct.new(:user, :post) do
 
   def permitted_attributes
     if publish?
-      [:title, :body, :description, :published]
+      [:title, :body, :description, :published, :tag_list]
     elsif create?
-      [:title, :body, :description]
+      [:title, :body, :description, :tag_list]
     end
   end
 end

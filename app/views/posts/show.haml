@@ -6,6 +6,7 @@
         %p Unpublished
       %p
         Posted #{@post.created_at.to_date} by #{@post.author.display_name}
+      %p= raw "Tags: #{@post.tag_list.map{ |t| link_to t, post_tag_path(t) }.join( ', ')}"
     %article
       = markdown @post.body
       = render "posts/disqus" if Rails.env.production?

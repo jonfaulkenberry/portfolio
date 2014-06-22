@@ -20,6 +20,7 @@ group :doc do
   gem "sdoc", "~> 0.4.0", {:require=>false}
 end
 
+gem "acts-as-taggable-on"
 gem "codemirror-rails", "~> 4.2"
 gem "coffee-rails", "~> 4.0.1"
 gem "devise", "~> 3.2.4"

@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
+  acts_as_taggable
   friendly_id :title, :use => [:slugged, :history]
   belongs_to :author, class_name: "User"
   validates :title, length: { in: 4..255 }

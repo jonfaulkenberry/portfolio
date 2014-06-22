@@ -348,7 +348,7 @@ $body-font-style: normal;
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
+$button-font-weight: 700;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
@@ -510,7 +510,7 @@ $body-font-style: normal;
 // $form-label-pointer: pointer;
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: $font-weight-normal;
-// $form-label-line-height: 1.5;
+$form-label-line-height: 2.875rem;
 // $form-label-font-color: scale-color(#000, $lightness: 30%);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
@@ -520,13 +520,13 @@ $body-font-style: normal;
 // $input-bg-color: #fff;
 // $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
 // $input-border-color: scale-color(#fff, $lightness: -20%);
-// $input-focus-border-color: scale-color(#fff, $lightness: -40%);
-// $input-border-style: solid;
-// $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+$input-focus-border-color: #999;
+$input-border-style: none;
+$input-border-width: 0.125rem;
+$input-border-radius: 0.250rem;
 // $input-disabled-bg: #ddd;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-// $input-include-glowing-effect: true;
+$input-box-shadow: none;
+$input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
@@ -1182,11 +1182,11 @@ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+// $topbar-margin-bottom: 5rem;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: 1.625rem;
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: $topbar-bg;
@@ -1211,7 +1211,7 @@ $topbar-link-bg-hover: $topbar-bg;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
+$topbar-link-text-transform: uppercase;
 // $topbar-link-padding: $topbar-height / 3;
 
 // $topbar-button-font-size: 0.75rem;

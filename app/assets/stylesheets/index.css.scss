@@ -1,0 +1,20 @@
+body[data-rails-controller="welcome"][data-rails-controller-action="index"] { 
+  padding-top: 0; 
+  background: asset-url("unsplash_bg.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  #main {
+    color: #fff;
+    margin-top: 0;
+    text-align: center;
+    padding: 4.375rem 0 5.938rem;
+    
+    h1 {
+      font-size: 2.5625rem;
+      color: #fff;
+    }
+  }
+}

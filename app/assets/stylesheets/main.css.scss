@@ -1,195 +1,85 @@
-/* BODY STYLE */
 body {
-  padding-top: 3.5rem;
-}
-/* LINK */
-a {
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
+  a {
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  
+  button, .button {
+    text-transform: uppercase;
+    box-shadow: 0 4px #0075a3;
+    
+    &:focus {
+      box-shadow: 0 4px #00628a;
+    }
+    
+    &.alert {
+      box-shadow: 0 4px #d92a0d;
+      
+      &:hover, &:focus {
+        box-shadow: 0 4px #d31800;
+      }
+    }
+    
+    &.secondary {
+      box-shadow: 0 4px #c3c3c3;
+      
+      &:hover, &:focus {
+        box-shadow: 0 4px #bbb;
+      }
+    }
+    
+    &.success {
+      box-shadow: 0 4px #2c9553;
+      
+      &:hover, &:focus {
+        box-shadow: 0 4px #258348;
+      }
+    }
+  }
+  
+  #footer {
+    background-color: rgba(37,37,37,0.9);
+    bottom: 0;
+    color: #979797;
+    padding: 1rem 0rem 0rem 0rem;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 97;
+  
+    a, a:visited {
+      color: #979797;
+    
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 
-/* #Custom CSS Foundation 5.0.2
-================================================== */
-/* TYPO */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-}
-p {
-  font-size: 0.875rem;
-}
-/* BUTTONS */
-button,
-.button {
-//  font-family: "Raleway-Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 0.8125rem;
-  font-weight: 700 !important;
-  text-transform: uppercase;
-  box-shadow: 0 4px #0075a3;
-}
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  text-decoration: none;
-  box-shadow: 0 4px #00628a;
-  outline: none;
-  outline: 0 auto -webkit-focus-ring-color;
-  outline-offset: 0;
-}
-button.alert,
-.button.alert {
-  box-shadow: 0 4px #d92a0d;
-}
-button.alert:hover,
-button.alert:focus,
-.button.alert:hover,
-.button.alert:focus {
-  box-shadow: 0 4px #d31800;
-}
-button.secondary,
-.button.secondary {
-  box-shadow: 0 4px #c3c3c3;
-}
-button.secondary:hover,
-button.secondary:focus,
-.button.secondary:hover,
-.button.secondary:focus {
-  box-shadow: 0 4px #bbb;
-}
-button.success,
-.button.success {
-  box-shadow: 0 4px #2c9553;
-}
-button.success:hover,
-button.success:focus,
-.button.success:hover,
-.button.success:focus {
-  box-shadow: 0 4px #258348;
-}
-/* TOP BAR */
-//.top-bar {
-//  background-color: transparent;
-//}
-.top-bar .name h1 {
-  font-family: "Raleway-Regular", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-  font-size: 1.625rem;
-  margin-top: 0.625rem;
-}
-//.top-bar .name h1 a {
-//  color: #444;
-//}
-//.top-bar .name h1 a:hover {
-//  text-decoration: none;
-//  color: #ea2f10;
-//}
-//.top-bar .toggle-topbar.menu-icon a {
-//  color: #979797;
-//}
-.top-bar .toggle-topbar.menu-icon a span {
-  -webkit-box-shadow: 0 10px 0 1px #979797, 0 16px 0 1px #979797, 0 22px 0 1px #979797;
-  box-shadow: 0 10px 0 1px #979797, 0 16px 0 1px #979797, 0 22px 0 1px #979797;
-}
-//.top-bar-section ul,
-//.top-bar-section li a:not(.button) {
-//  background-color: transparent;
-//}
-.top-bar-section li a:not(.button) {
-  //font-family: "Raleway-Regular", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  color: #444;
-  text-transform: uppercase;
-  padding: 0.625rem 0.9375rem;
-}
-//.top-bar-section ul li.active > a,
-//.top-bar-section ul li.active > a:hover,
-////.top-bar-section li a:not(.button):hover {
-////  color: #ea2f10;
-////  text-decoration: none;
-////}
-//.top-bar.expanded .title-area {
-//  background-color: transparent;
-//  border-bottom: 1px solid #e8e8e8;
-//}
-/* INPUT */
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea {
-  height: 2.875rem;
-  /*  font-style: italic;*/
-  border-width: 2px;
-  border-radius: 4px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-textarea:focus {
-  border-color: #999;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  outline: none;
-  outline: 0 auto -webkit-focus-ring-color;
-  outline-offset: 0;
-}
-textarea {
-  height: 8.375rem;
-}
-/* #Themes Styles
-================================================== */
+  #main {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  
+  #toast-container div {
+    opacity: 1.0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+  }
+  
+  .fixed {
+    z-index: 97;
+  }
 
-/* BORDER BOTTOM */
-.line {
-  display: block;
-  width: 2.5rem;
-  height: 4px;
-  background-color: #444;
-  margin: 0 auto;
-}
-/* NAV HEADER */
-.fixed {
-  z-index: 97;
-}
-.mathead {
-  background-color: rgba(244, 244, 244, 1.0);
-  box-shadow: 0 1px #e8e8e8;
-}
-.intro {
-  background-color: transparent;
-  text-align: center;
-  padding: 4.375rem 0 5.938rem;
-}
-.intro h1 {
-  font-size: 2.5625rem;
-}
+  .mathead {
+    background-color: rgba(244, 244, 244, 1.0);
+    box-shadow: 0 1px #e8e8e8;
+  }
+  
+  .search-icon, .search-back-icon {
 
-
+    &:hover {
+      color: #ea2f10;
+    }
+  }
+}

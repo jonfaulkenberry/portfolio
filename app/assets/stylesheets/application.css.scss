@@ -1,5 +1,4 @@
 /*
-*= require foundation_and_overrides
 *= require normalize-rails
 *= require font-awesome
 *= require toastr
@@ -8,31 +7,8 @@
 *= require nprogress
 *= require_tree .
 *= require_self
+*= require foundation_and_overrides
 */
-a.button:visited { color: #fff; }
-
-.name h1 a:hover { 
-  background-color: rgba(245, 245, 245, 0.0);
-  color: #444;
-}
-
-.menu-icon a:hover {
-  background-color: rgba(245, 245, 245, 0.0);
-}
-
-#footer {
-  background-color: rgba(37,37,37,0.9);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 3rem;
-  padding: 1rem 0rem 1rem 0rem;
-  z-index: 97;
-}
-
-#footer a:hover {
-  color: #fff;
-}
 
 .intro-text {
   color: #fff;
@@ -45,10 +21,6 @@ a.button:visited { color: #fff; }
 
 .top-bar-section > ul.right > li > a {
   padding: 0.5rem 0.9375rem !important;
-}
-
-.top-bar {
-  margin-bottom: 1rem;
 }
 
 .CodeMirror {
@@ -87,12 +59,8 @@ body[data-rails-controller="welcome"][data-rails-controller-action="index"] {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
+
   #main {
     margin-top: 0;
   }
-}
-
-body[data-rails-controller="welcome"][data-rails-controller-action="contact"] {
-  background-color: #444;
 }

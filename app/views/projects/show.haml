@@ -5,6 +5,6 @@
       %p
         = link_to "Edit Project", edit_project_path(@project), :class => "button tiny radius"
         = link_to "Delete Project", @project, :class => "button tiny radius alert", :method => :delete, :data => { :confirm => "Are you sure?" }
-    %p= raw "Tags: #{@project.tag_list.map{ |t| link_to t, project_tag_path(t) }.join( ', ')}"
+    %p= raw "Tags: #{project_tag_list(@project)}"
     %p
       Technologies used: #{@project.technologies_used}

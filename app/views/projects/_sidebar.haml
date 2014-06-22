@@ -1,0 +1,15 @@
+.medium-4.columns
+  %aside
+    - if @project
+      %p
+        - if policy(@project).edit?
+          %div= link_to "Edit Project", edit_project_path(@project)
+        - if policy(@project).destroy?
+          %div
+            = link_to "Delete Project", @project,                                |
+              :method => :delete, :data => { :confirm => "Are you sure?" } |
+  
+    %h6 Tags
+    %ul#projects-by-tag
+      - Project.tag_counts.sort_by {|tag| tag.count}.reverse.each do |t|
+        %li= link_to "#{t.name} (#{t.count})", project_tag_path(t.name)

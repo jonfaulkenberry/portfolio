@@ -7,5 +7,5 @@
         .project{id: dom_id(project)}
           %h3= link_to project.name, project
           %p= raw "Tags: #{project_tag_list(project)}"
-          %article= project.technologies_used
+          %section= project.description
   = render "projects/sidebar"

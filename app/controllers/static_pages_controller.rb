@@ -8,4 +8,8 @@ class StaticPagesController < ApplicationController
       redirect_to root_path
     end
   end
+  
+  def manage
+    raise Pundit::NotAuthorizedError unless !current_user.nil? && current_user.owner?
+  end
 end

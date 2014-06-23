@@ -9,24 +9,14 @@ ProjectPolicy = Struct.new(:user, :project) do
     end
   end
 
-  def create?
+  def owner?
     return false if user.nil?
     user.owner?
   end
   
-  def edit?
-    return false if user.nil?
-    user.owner?
-  end
-
-  def destroy?
-    return false if user.nil?
-    user.owner?
-  end 
-
   def permitted_attributes
     if user.owner?
-      [:title, :body, :description, :published, :tag_list]
+      [:name, :body, :description, :tag_list]
     end
   end
 end

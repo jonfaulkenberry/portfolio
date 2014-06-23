@@ -2,9 +2,8 @@
   %aside
     - if @project
       %p
-        - if policy(@project).edit?
+        - if policy(@project).owner?
           %div= link_to "Edit Project", edit_project_path(@project)
-        - if policy(@project).destroy?
           %div
             = link_to "Delete Project", @project,                                |
               :method => :delete, :data => { :confirm => "Are you sure?" } |

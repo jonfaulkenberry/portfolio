@@ -3,7 +3,10 @@ FactoryGirl.define do
     sequence :name do |n|
       n.to_s + Forgery(:lorem_ipsum).words(10, :random => true)
     end
-    sequence :technologies_used do |n|
+    sequence :description do |n|
+      n.to_s + Forgery(:lorem_ipsum).words(10, :random => true)
+    end
+    sequence :body do |n|
       n.to_s + Forgery(:lorem_ipsum).words(10, :random => true)
     end
   end

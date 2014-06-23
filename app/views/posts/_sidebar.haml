@@ -2,9 +2,8 @@
   %aside
     - if @post
       %p
-        - if policy(@post).edit?
+        - if policy(@post).owner?
           %div= link_to "Edit Post", edit_post_path(@post)
-        - if policy(@post).destroy?
           %div
             = link_to "Delete Post", @post,                                |
               :method => :delete, :data => { :confirm => "Are you sure?" } |

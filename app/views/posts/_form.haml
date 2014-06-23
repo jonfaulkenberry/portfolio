@@ -11,10 +11,9 @@
     = f.label :title
     %br/
     = f.text_field :title
-  - if policy(@post).publish?
-    .field
-      = f.label :published
-      = f.check_box :published
+  .field
+    = f.label :published
+    = f.check_box :published
   .field
     = f.label :description
     %br/

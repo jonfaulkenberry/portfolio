@@ -14,10 +14,12 @@ class ProjectsController < ApplicationController
   
   def new
     @project = Project.new
+    authorize @project, :owner?
   end
   
   def create
     @project = Project.new(project_params)
+    authorize @project, :owner?
     if @project.save
         flash[:notice] = "Project has been created."
         redirect_to @project
@@ -33,10 +35,12 @@ class ProjectsController < ApplicationController
   
   def edit
     @project = Project.find(params[:id])
+    authorize @project, :owner?
   end
   
   def update
     @project = Project.find(params[:id])
+    authorize @project, :owner?
     if @project.update_attributes(project_params)
       redirect_to @project, notice: 'Project was successfully updated.'
     else
@@ -45,13 +49,14 @@ class ProjectsController < ApplicationController
   end
   
   def destroy
+    authorize @project, :owner?
     @project.destroy
     redirect_to portfolio_url, notice: 'Project was successfully deleted.'
   end
   
   private
   def project_params
-    params.require(:project).permit(:name, :technologies_used, :tag_list)
+    params.require(:project).permit(*policy(@project || Project).permitted_attributes)
   end
   
   private

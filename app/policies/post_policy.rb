@@ -9,25 +9,10 @@ PostPolicy = Struct.new(:user, :post) do
     end
   end
 
-  def create?
-    return false if user.nil?
+  def owner?
+    return false if user.nil? || user.role == "viewer"
     user.owner?
   end
-
-  def publish?
-    return false if user.nil?
-    user.owner?
-  end
-  
-  def edit?
-    return false if user.nil?
-    user.owner?
-  end
-
-  def destroy?
-    return false if user.nil?
-    user.owner?
-  end 
 
   def permitted_attributes
     if user.owner?

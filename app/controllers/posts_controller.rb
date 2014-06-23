@@ -36,17 +36,19 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    authorize @post, :owner?
   end
 
   # GET /posts/1/edit
   def edit
+    authorize @post, :owner?
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    authorize @post, :owner?
     respond_to do |format|
       if @post.save
         current_user.posts << @post
@@ -62,6 +64,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    authorize @post, :owner?
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -76,6 +79,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    authorize @post, :owner?
     @post.destroy
     respond_to do |format|
       format.html { redirect_to blog_url, notice: 'Post was successfully deleted.'}

@@ -2,6 +2,6 @@
   .medium-8.columns
     %h2= @project.name
     %p= raw "Tags: #{project_tag_list(@project)}"
-    %p
-      Technologies used: #{@project.technologies_used}
+    %article
+      = markdown @project.body
   = render "projects/sidebar"

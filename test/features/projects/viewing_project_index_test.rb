@@ -7,6 +7,6 @@ feature "As a visitor, I want to view the portfolio page" do
   scenario "view portfolio page successfully" do
     visit projects_path
     page.text.must_include @project.name
-    page.text.must_include @project.technologies_used
+    page.text.must_include @project.description
   end
 end

@@ -1,0 +1,1 @@
+Sunspot.config.solr.url = ENV['SOLR_URL'] if Rails.env.production?

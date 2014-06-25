@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :archive, only: [:show, :index, :posts_by_month, :search, :tags]
-  before_action :scoped_posts, only: [:index]
+  before_action :scoped_posts, only: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show, :posts_by_month, :search, :tags]
 
   def posts_by_month

@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     if params[:search]
       search = scoped_posts.search do
         fulltext params[:search]
-        with(:published, true)
+        # with(:published, true)
         order_by :created_at, :desc
       end
       @posts = search.results

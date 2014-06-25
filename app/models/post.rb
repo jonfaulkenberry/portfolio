@@ -9,4 +9,11 @@ class Post < ActiveRecord::Base
   def should_generate_new_friendly_id?
     slug.blank? || title_changed?
   end
+  
+  searchable do
+    string :title
+    text :description, :body, :tag_list
+    date :created_at
+    boolean :published
+  end
 end

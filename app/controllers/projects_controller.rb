@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  
   before_filter :set_project, only: [:show, :edit, :update, :destroy]
   
   def index

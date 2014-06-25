@@ -1,9 +1,9 @@
 .row
   .medium-8.columns
-    - if policy_scope(@posts).empty?
+    - if @posts.empty?
       %h3 There are no posts to show!
     - else
-      - policy_scope(@posts).each do |post|
+      - @posts.each do |post|
         %article
           %header
             %h3= link_to post.title, post
@@ -12,3 +12,4 @@
           %section= post.description
         %hr/
   = render "posts/sidebar"
+  

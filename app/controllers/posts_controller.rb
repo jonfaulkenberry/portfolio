@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :archive, only: [:show, :index, :posts_by_month, :search, :tags]
   before_action :scoped_posts, only: [:index]
-  before_action :authenticate_user!, except: [:index, :show, :posts_by_month]
+  before_action :authenticate_user!, except: [:index, :show, :posts_by_month, :search, :tags]
 
   def posts_by_month
     @posts = scoped_posts.where("MONTH(created_at) = ? and YEAR(created_at) = ?", 

@@ -17,5 +17,5 @@
   
     %h6 Tags
     %ul#posts-by-tag
-      - Post.tag_counts.sort_by {|tag| tag.count}.reverse.each do |t|
+      - @posts.tag_counts.sort_by {|tag| tag.count}.reverse.each do |t|
         %li= link_to "#{t.name} (#{t.count})", post_tag_path(t.name)

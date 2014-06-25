@@ -6,6 +6,7 @@ gem "rails", "4.1.1"
 
 group :development do
   gem "letter_opener", "~> 1.2.0"
+  gem "metric_fu", {:require=>false}
 end
 
 group :test do

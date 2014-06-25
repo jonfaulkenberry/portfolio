@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   
   def tags
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = scoped_posts.tagged_with(params[:tag])
     end
     render :index
   end

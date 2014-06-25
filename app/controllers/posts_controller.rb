@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :archive, only: [:show, :index, :posts_by_month, :search, :tags]
-  before_action :all_posts, only: [:index]
+  before_action :scoped_posts, only: [:index]
   before_action :authenticate_user!, except: [:index, :show, :posts_by_month]
 
   def posts_by_month
-    @posts = all_posts.where("MONTH(created_at) = ? and YEAR(created_at) = ?", 
+    @posts = scoped_posts.where("MONTH(created_at) = ? and YEAR(created_at) = ?", 
       params[:month], params[:year])
     render :index
   end
@@ -18,11 +18,17 @@ class PostsController < ApplicationController
   end
   
   def search
-    if params["search"]
-      @posts = all_posts.where("title LIKE ? OR description LIKE ? OR body LIKE ?", 
-        params[:search], params[:search], params[:search])
+    if params[:search]
+      search = scoped_posts.search do
+        fulltext params[:search]
+        order_by :created_at, :desc
+      end
+      @posts = search.results
+      render :index
+    else
+      flash[:error] = "Invalid search query"
+      redirect_to(request.referrer || root_path)
     end
-    render :index
   end
 
   # GET /posts/1
@@ -93,7 +99,7 @@ class PostsController < ApplicationController
     @post = policy_scope(Post).friendly.find(params[:id])
   end
   
-  def all_posts
+  def scoped_posts
     @posts = policy_scope(Post)
   end
 
@@ -103,7 +109,7 @@ class PostsController < ApplicationController
   end
   
   def archive
-    @posts_by_month = all_posts.sort.reverse.group_by do |post| 
+    @posts_by_month = scoped_posts.sort.reverse.group_by do |post| 
       { 
         "month_name_and_year" => post.created_at.strftime("%B %Y"),
         "month" => post.created_at.month,

@@ -17,10 +17,10 @@
           %li= link_to "Blog", blog_url, :class => "topnav-link"
           %li= link_to "Portfolio", portfolio_url, :class => "topnav-link"
 
-          / =form_tag("/search", method: "get", :class => "search-form") do
-          /   %li= text_field_tag :search, params[:search]
-          /   %li= submit_tag "Search", :name => nil, :class => "search-btn button small radius"
-          /   %li
-          /     %i.search-icon.fa.fa-search.fa-lg &nbsp;
-          /   %li
-          /     %i.search-back-icon.fa.fa-arrow-circle-left.fa-lg &nbsp;
+          =form_tag("/search", method: "get", :class => "search-form") do
+            %li= text_field_tag :search, params[:search]
+            %li= submit_tag "Search", :name => nil, :class => "search-btn button small radius"
+            %li
+              %i.search-icon.fa.fa-search.fa-lg &nbsp;
+            %li
+              %i.search-back-icon.fa.fa-arrow-circle-left.fa-lg &nbsp;

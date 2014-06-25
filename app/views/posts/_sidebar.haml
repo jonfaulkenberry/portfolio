@@ -2,7 +2,7 @@
   %aside
     - if @post
       %p
-        - if policy(@post).owner?
+        - if current_user.owner?
           %div= link_to "Edit Post", edit_post_path(@post)
           %div
             = link_to "Delete Post", @post,                                |

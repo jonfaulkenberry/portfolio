@@ -49,5 +49,7 @@ gem "redcarpet", "~> 3.1.2"
 gem "sass-rails", "~> 4.0.3"
 gem "sidekiq", "~> 3.1.3"
 gem "sinatra", "~> 1.4.5"
+gem 'sunspot_rails'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 gem "turbolinks", "~> 2.2.2"
 gem "uglifier", "~> 2.5.0"

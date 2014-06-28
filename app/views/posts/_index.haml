@@ -1,0 +1,12 @@
+.medium-8.columns
+  - if @posts.empty?
+    %h3 There are no posts to show!
+  - else
+    - @posts.each do |post|
+      %article
+        %header
+          %h3= link_to post.title, post
+          %p= post.created_at.to_date
+          %p= raw "Tags: #{post_tag_list(post)}"
+        %section= post.description
+      %hr/

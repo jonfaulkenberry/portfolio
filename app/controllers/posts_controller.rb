@@ -25,7 +25,7 @@ class PostsController < ApplicationController
         order_by :created_at, :desc
       end
       @posts = search.results
-      render :index
+      render :search
     else
       flash[:error] = "Invalid search query"
       redirect_to(request.referrer || root_path)

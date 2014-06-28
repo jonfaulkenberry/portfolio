@@ -32,6 +32,14 @@ body[data-rails-controller="static_pages"][data-rails-controller-action="contact
         background-color: #717171;
       }
     }
+    
+    #recaptcha_area {
+      margin: 0 0 1rem 0;
+    }
+    
+    .recaptchatable {
+      width: 100%;
+    }
   }
   
   .social-icon {

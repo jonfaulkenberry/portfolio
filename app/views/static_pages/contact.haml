@@ -38,6 +38,7 @@
             Message
             %span.required *
           %textarea{cols: "10", name: "message", placeholder: "Your message", rows: "4"}
+        =recaptcha_tags :display => { :theme => "clean" } # if Rails.env.production?
         .input-item.text-center
           %input.button.small.success.radius{type: "submit", value: "Submit"}/
     .medium-3.columns  
